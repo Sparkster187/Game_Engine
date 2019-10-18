@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.6)
 project(Game_Engine)
 
+include_directories(src)
+
 add_library(Big_Boy
 src/Big_Boy/dummy.cpp
 )

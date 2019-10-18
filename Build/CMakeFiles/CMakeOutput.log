@@ -1,105 +1,155 @@
 The system is: Windows - 10.0.18362 - AMD64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: D:/gep_sdk/opt/bcc-10.1/bin/bcc32c.exe 
-Build flags: -ID:/gep_sdk/include/bcc;-ID:/gep_sdk/include/common
+Compiler:  
+Build flags: /ID:/gep_sdk-20191003/gep_sdk/include/msvc;/ID:/gep_sdk-20191003/gep_sdk/include/common
 Id flags:  
 
 The output was:
 0
-Embarcadero C++ 7.20 for Win32 Copyright (c) 2012-2016 Embarcadero Technologies, Inc.
-CMakeCCompilerId.c:
-Turbo Incremental Link 6.75 Copyright (c) 1997-2016 Embarcadero Technologies, Inc.
+Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 18/10/2019 13:23:45.
+Project "D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\bin\Hostx86\x86\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+Done Building Project "D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.73
 
 
-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.tds"
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is Embarcadero, found in "D:/Game_Engine/Build/CMakeFiles/3.15.1/CompilerIdC/CMakeCCompilerId.exe"
+The C compiler identification is MSVC, found in "D:/DCMW Engine/Game_Engine/Build/CMakeFiles/3.15.1/CompilerIdC/CompilerIdC.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: D:/gep_sdk/opt/bcc-10.1/bin/bcc32c.exe 
-Build flags: -ID:/gep_sdk/include/bcc;-ID:/gep_sdk/include/common
+Compiler:  
+Build flags: /ID:/gep_sdk-20191003/gep_sdk/include/msvc;/ID:/gep_sdk-20191003/gep_sdk/include/common
 Id flags:  
 
 The output was:
 0
-Embarcadero C++ 7.20 for Win32 Copyright (c) 2012-2016 Embarcadero Technologies, Inc.
-CMakeCXXCompilerId.cpp:
-Turbo Incremental Link 6.75 Copyright (c) 1997-2016 Embarcadero Technologies, Inc.
+Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 18/10/2019 13:23:47.
+Project "D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdCXX.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CompilerIdCXX\.\CompilerIdCXX.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\bin\Hostx86\x86\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
+Done Building Project "D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.24
 
 
-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.tds"
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is Embarcadero, found in "D:/Game_Engine/Build/CMakeFiles/3.15.1/CompilerIdCXX/CMakeCXXCompilerId.exe"
+The CXX compiler identification is MSVC, found in "D:/DCMW Engine/Game_Engine/Build/CMakeFiles/3.15.1/CompilerIdCXX/CompilerIdCXX.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: D:/Game_Engine/Build/CMakeFiles/CMakeTmp
+Change Dir: D:/DCMW Engine/Game_Engine/Build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):make cmTC_68560\fast && MAKE Version 5.41  Copyright (c) 1987, 2014 Embarcadero Technologies, Inc.
-	make -f CMakeFiles\cmTC_68560.dir\build.make -l -o  CMakeFiles\cmTC_68560.dir\build
-MAKE Version 5.41  Copyright (c) 1987, 2014 Embarcadero Technologies, Inc.
-Building C object CMakeFiles/cmTC_68560.dir/testCCompiler.c.obj
-	D:\gep_sdk\opt\bcc-10.1\bin\bcc32c.exe -tR -DWIN32   -ID:/gep_sdk/include/bcc -ID:/gep_sdk/include/common -tM -Od -v -oCMakeFiles\cmTC_68560.dir\testCCompiler.c.obj -c D:\Game_Engine\Build\CMakeFiles\CMakeTmp\testCCompiler.c
-Embarcadero C++ 7.20 for Win32 Copyright (c) 2012-2016 Embarcadero Technologies, Inc.
-D:\Game_Engine\Build\CMakeFiles\CMakeTmp\testCCompiler.c:
-Linking C executable cmTC_68560.exe
-	D:\gep_sdk\opt\bcc-10.1\bin\bcc32c.exe -tR -ecmTC_68560.exe -tM -lS:1048576 -lSc:4098 -lH:1048576 -lHc:8192 -LD:/gep_sdk/lib/bcc -v -tC -ID:/gep_sdk/include/bcc -ID:/gep_sdk/include/common -tM -Od -v @MAKE0000.@@@
-Embarcadero C++ 7.20 for Win32 Copyright (c) 2012-2016 Embarcadero Technologies, Inc.
-Turbo Incremental Link 6.75 Copyright (c) 1997-2016 Embarcadero Technologies, Inc.
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_8a767.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:m && Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"D:\gep_sdk-20191003\gep_sdk\include\msvc" /I"D:\gep_sdk-20191003\gep_sdk\include\common" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8a767.dir\Debug\\" /Fd"cmTC_8a767.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\DCMW Engine\Game_Engine\Build\CMakeFiles\CMakeTmp\testCCompiler.c"
+  testCCompiler.c
+  
+  cmTC_8a767.vcxproj -> D:\DCMW Engine\Game_Engine\Build\CMakeFiles\CMakeTmp\Debug\cmTC_8a767.exe
 
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: D:/Game_Engine/Build/CMakeFiles/CMakeTmp
+Change Dir: D:/DCMW Engine/Game_Engine/Build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):make cmTC_b8dd1\fast && MAKE Version 5.41  Copyright (c) 1987, 2014 Embarcadero Technologies, Inc.
-	make -f CMakeFiles\cmTC_b8dd1.dir\build.make -l -o  CMakeFiles\cmTC_b8dd1.dir\build
-MAKE Version 5.41  Copyright (c) 1987, 2014 Embarcadero Technologies, Inc.
-Building C object CMakeFiles/cmTC_b8dd1.dir/CMakeCCompilerABI.c.obj
-	D:\gep_sdk\opt\bcc-10.1\bin\bcc32c.exe -tR -DWIN32   -ID:/gep_sdk/include/bcc -ID:/gep_sdk/include/common -tM -Od -v -oCMakeFiles\cmTC_b8dd1.dir\CMakeCCompilerABI.c.obj -c D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCCompilerABI.c
-Embarcadero C++ 7.20 for Win32 Copyright (c) 2012-2016 Embarcadero Technologies, Inc.
-D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCCompilerABI.c:
-Linking C executable cmTC_b8dd1.exe
-	D:\gep_sdk\opt\bcc-10.1\bin\bcc32c.exe -tR -ecmTC_b8dd1.exe -tM -lS:1048576 -lSc:4098 -lH:1048576 -lHc:8192 -LD:/gep_sdk/lib/bcc -v -tC -ID:/gep_sdk/include/bcc -ID:/gep_sdk/include/common -tM -Od -v @MAKE0000.@@@
-Embarcadero C++ 7.20 for Win32 Copyright (c) 2012-2016 Embarcadero Technologies, Inc.
-Turbo Incremental Link 6.75 Copyright (c) 1997-2016 Embarcadero Technologies, Inc.
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_357f7.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:m && Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"D:\gep_sdk-20191003\gep_sdk\include\msvc" /I"D:\gep_sdk-20191003\gep_sdk\include\common" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_357f7.dir\Debug\\" /Fd"cmTC_357f7.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\gep_sdk-20191003\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCCompilerABI.c"
+  CMakeCCompilerABI.c
+  
+  cmTC_357f7.vcxproj -> D:\DCMW Engine\Game_Engine\Build\CMakeFiles\CMakeTmp\Debug\cmTC_357f7.exe
 
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: D:/Game_Engine/Build/CMakeFiles/CMakeTmp
+Change Dir: D:/DCMW Engine/Game_Engine/Build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):make cmTC_99fa4\fast && MAKE Version 5.41  Copyright (c) 1987, 2014 Embarcadero Technologies, Inc.
-	make -f CMakeFiles\cmTC_99fa4.dir\build.make -l -o  CMakeFiles\cmTC_99fa4.dir\build
-MAKE Version 5.41  Copyright (c) 1987, 2014 Embarcadero Technologies, Inc.
-Building CXX object CMakeFiles/cmTC_99fa4.dir/testCXXCompiler.cxx.obj
-	D:\gep_sdk\opt\bcc-10.1\bin\bcc32c.exe -tR -DWIN32   -ID:/gep_sdk/include/bcc -ID:/gep_sdk/include/common -tM -Od -v -oCMakeFiles\cmTC_99fa4.dir\testCXXCompiler.cxx.obj -P -c D:\Game_Engine\Build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
-Embarcadero C++ 7.20 for Win32 Copyright (c) 2012-2016 Embarcadero Technologies, Inc.
-D:\Game_Engine\Build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx:
-Linking CXX executable cmTC_99fa4.exe
-	D:\gep_sdk\opt\bcc-10.1\bin\bcc32c.exe -tR -ecmTC_99fa4.exe -tM -lS:1048576 -lSc:4098 -lH:1048576 -lHc:8192 -LD:/gep_sdk/lib/bcc -v -tC -ID:/gep_sdk/include/bcc -ID:/gep_sdk/include/common -tM -Od -v @MAKE0000.@@@
-Embarcadero C++ 7.20 for Win32 Copyright (c) 2012-2016 Embarcadero Technologies, Inc.
-Turbo Incremental Link 6.75 Copyright (c) 1997-2016 Embarcadero Technologies, Inc.
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_11824.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:m && Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"D:\gep_sdk-20191003\gep_sdk\include\msvc" /I"D:\gep_sdk-20191003\gep_sdk\include\common" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_11824.dir\Debug\\" /Fd"cmTC_11824.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "D:\DCMW Engine\Game_Engine\Build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  testCXXCompiler.cxx
+  
+  cmTC_11824.vcxproj -> D:\DCMW Engine\Game_Engine\Build\CMakeFiles\CMakeTmp\Debug\cmTC_11824.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: D:/Game_Engine/Build/CMakeFiles/CMakeTmp
+Change Dir: D:/DCMW Engine/Game_Engine/Build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):make cmTC_bccaa\fast && MAKE Version 5.41  Copyright (c) 1987, 2014 Embarcadero Technologies, Inc.
-	make -f CMakeFiles\cmTC_bccaa.dir\build.make -l -o  CMakeFiles\cmTC_bccaa.dir\build
-MAKE Version 5.41  Copyright (c) 1987, 2014 Embarcadero Technologies, Inc.
-Building CXX object CMakeFiles/cmTC_bccaa.dir/CMakeCXXCompilerABI.cpp.obj
-	D:\gep_sdk\opt\bcc-10.1\bin\bcc32c.exe -tR -DWIN32   -ID:/gep_sdk/include/bcc -ID:/gep_sdk/include/common -tM -Od -v -oCMakeFiles\cmTC_bccaa.dir\CMakeCXXCompilerABI.cpp.obj -P -c D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp
-Embarcadero C++ 7.20 for Win32 Copyright (c) 2012-2016 Embarcadero Technologies, Inc.
-D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp:
-Linking CXX executable cmTC_bccaa.exe
-	D:\gep_sdk\opt\bcc-10.1\bin\bcc32c.exe -tR -ecmTC_bccaa.exe -tM -lS:1048576 -lSc:4098 -lH:1048576 -lHc:8192 -LD:/gep_sdk/lib/bcc -v -tC -ID:/gep_sdk/include/bcc -ID:/gep_sdk/include/common -tM -Od -v @MAKE0000.@@@
-Embarcadero C++ 7.20 for Win32 Copyright (c) 2012-2016 Embarcadero Technologies, Inc.
-Turbo Incremental Link 6.75 Copyright (c) 1997-2016 Embarcadero Technologies, Inc.
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin/MSBuild.exe cmTC_797c4.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:m && Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /I"D:\gep_sdk-20191003\gep_sdk\include\msvc" /I"D:\gep_sdk-20191003\gep_sdk\include\common" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_797c4.dir\Debug\\" /Fd"cmTC_797c4.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "D:\gep_sdk-20191003\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp"
+  CMakeCXXCompilerABI.cpp
+  
+  cmTC_797c4.vcxproj -> D:\DCMW Engine\Game_Engine\Build\CMakeFiles\CMakeTmp\Debug\cmTC_797c4.exe
 
 
 
