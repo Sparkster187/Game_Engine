@@ -13,9 +13,4 @@
       <UniqueIdentifier>{D6B3E918-03EC-3BF4-95BF-AE56E3F2EC6F}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Entity.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-  </ItemGroup>
 </Project>
