@@ -6,28 +6,31 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Environment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="D:\DCMW Engine\Game_Engine\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{D6B3E918-03EC-3BF4-95BF-AE56E3F2EC6F}</UniqueIdentifier>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{D3ADCCD7-C1ED-3565-AFE5-6BCF5A28EDFB}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Component.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Core.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Environment.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Keyboard.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C1FFE1F4-9D18-35C6-8555-7352B531BF64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
