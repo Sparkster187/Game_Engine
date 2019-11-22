@@ -9,6 +9,7 @@ class Core;
 class Keyboard;
 class Entity;
 class Environment;
+class Transform;
 
 class Component
 {
@@ -17,6 +18,7 @@ public:
 	std::shared_ptr<Core> getCore();
 	std::shared_ptr<Keyboard> getKeyboard();
 	std::shared_ptr<Environment> getEnvironment();
+	std::shared_ptr<Transform> getTransform();
 private:
 	std::weak_ptr<Entity> entity;
 	void onInit();

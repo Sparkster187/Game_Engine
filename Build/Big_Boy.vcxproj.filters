@@ -1,36 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\dummy.cpp">
+    <ClCompile Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\dummy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\MeshRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Component.h">
+    <ClInclude Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\Component.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Core.h">
+    <ClInclude Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Entity.h">
+    <ClInclude Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Environment.h">
+    <ClInclude Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\Environment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Keyboard.h">
+    <ClInclude Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\Keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\Material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\Transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\MaterialAttribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\Screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\DCMW Engine\Tmp\Game_Engine\src\Big_Boy\MeshRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\DCMW Engine\Game_Engine\CMakeLists.txt" />
+    <CustomBuild Include="D:\DCMW Engine\Tmp\Game_Engine\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{D3ADCCD7-C1ED-3565-AFE5-6BCF5A28EDFB}</UniqueIdentifier>
+      <UniqueIdentifier>{96D54D25-F9DB-38E1-897B-A13799B8C7CD}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{C1FFE1F4-9D18-35C6-8555-7352B531BF64}</UniqueIdentifier>
+      <UniqueIdentifier>{E1EA11C1-E76A-3444-B52F-F688B071FEA0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

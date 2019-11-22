@@ -17,6 +17,7 @@ src/Big_Boy/MaterialAttribute.h
 src/Big_Boy/Screen.h
 src/Big_Boy/MeshRenderer.h
 src/Big_Boy/MeshRenderer.cpp
+src/Big_Boy/Core.cpp
 )
 target_link_libraries(Big_Boy SDL2 opengl32 glew32)
 

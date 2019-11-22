@@ -1,12 +1,12 @@
 #include <SDL2/SDL.h>
 #include <GL/glew.h>
 
+#include "MeshRenderer.h"
 #include <exception>
 
 #define WINDOW_WIDTH 640
 #define WINDOW_HEIGHT 480
 
-class MeshRenderer;
 
 const GLfloat positions[] = {
   0.0f, 0.5f, 0.0f,
@@ -41,7 +41,7 @@ const GLchar *fragmentShaderSrc =
 "}" \
 "";
 
-int Init()
+void MeshRenderer::Init()
 {
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
@@ -170,8 +170,12 @@ int Init()
 	glDeleteShader(fragmentShaderId);
 }
 
-int Run()
+void MeshRenderer::onDisplay()
 {
+	SDL_Window * window;
+	GLuint programId;
+	GLuint vaoId;
+
 	bool quit = false;
 
 	while (!quit)
@@ -202,6 +206,4 @@ int Run()
 
 	SDL_DestroyWindow(window);
 	SDL_Quit();
-
-	return 0;
 }
