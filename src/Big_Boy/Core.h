@@ -13,9 +13,10 @@ class Keyboard;
 class Core
 {
 public:
+	static std::shared_ptr<Core> Initialize();
 	void start();
 	void stop();
-	std::shared_ptr<Entity> addEntity;
+	std::shared_ptr<Entity> addEntity();
 
 private:
 	std::shared_ptr<Environment> environment;

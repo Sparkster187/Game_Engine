@@ -1,9 +1,9 @@
-﻿  Building Custom Rule D:/DCMW Engine/Tmp/Game_Engine/CMakeLists.txt
+﻿  Building Custom Rule D:/DCMW Engine/Game_Engine/CMakeLists.txt
   dummy.cpp
   MeshRenderer.cpp
+  Core.cpp
   Generating Code...
-d:\dcmw engine\tmp\game_engine\src\big_boy\meshrenderer.cpp(171): warning C4715: 'Init': not all control paths return a value
-d:\dcmw engine\tmp\game_engine\src\big_boy\meshrenderer.cpp(196): warning C4700: uninitialized local variable 'programId' used
-d:\dcmw engine\tmp\game_engine\src\big_boy\meshrenderer.cpp(197): warning C4700: uninitialized local variable 'vaoId' used
-d:\dcmw engine\tmp\game_engine\src\big_boy\meshrenderer.cpp(204): warning C4700: uninitialized local variable 'window' used
-  Big_Boy.vcxproj -> D:\DCMW Engine\Tmp\Game_Engine\Build\Debug\Big_Boy.lib
+d:\dcmw engine\game_engine\src\big_boy\meshrenderer.cpp(196): warning C4700: uninitialized local variable 'programId' used
+d:\dcmw engine\game_engine\src\big_boy\meshrenderer.cpp(197): warning C4700: uninitialized local variable 'vaoId' used
+d:\dcmw engine\game_engine\src\big_boy\meshrenderer.cpp(204): warning C4700: uninitialized local variable 'window' used
+  Big_Boy.vcxproj -> D:\DCMW Engine\Game_Engine\Build\Debug\Big_Boy.lib
