@@ -1,6 +1,4 @@
 #pragma once
-#ifndef _RESOURCES_H_
-#define _RESOURCES_H_
 
 #include <memory>
 #include <list>
@@ -19,4 +17,3 @@ class Resources
 //	std::list<std::shared_ptr<Resources>> resources;
 //
 };
-#endif // !_RESOURCES_H_

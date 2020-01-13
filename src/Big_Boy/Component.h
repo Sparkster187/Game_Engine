@@ -1,8 +1,4 @@
 #pragma once
-
-#ifndef _COMPONENT_H_
-#define _COMPONENT_H_
-
 #include <memory>
 
 class Core;
@@ -19,12 +15,16 @@ public:
 	std::shared_ptr<Keyboard> getKeyboard();
 	std::shared_ptr<Environment> getEnvironment();
 	std::shared_ptr<Transform> getTransform();
+
+	virtual void onInit();
+	void onBegin();
+	virtual void onTick();
+	virtual void onDisplay();
+
+	virtual void onPostDisplay();
+	virtual void onGui();
+
 private:
 	std::weak_ptr<Entity> entity;
-	void onInit();
-	void onBegin();
-	void onTick();
-	void onDisplay();
+	
 };
-
-#endif

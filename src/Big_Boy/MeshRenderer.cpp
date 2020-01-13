@@ -41,7 +41,7 @@ const GLchar *fragmentShaderSrc =
 "}" \
 "";
 
-void MeshRenderer::Init()
+void MeshRenderer::onInit()
 {
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{

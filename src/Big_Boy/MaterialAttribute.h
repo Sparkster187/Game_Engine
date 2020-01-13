@@ -11,7 +11,7 @@ public:
 	std::string name;
 	int type;
 	float FloatValue;
-	std::weak_ptr<Texture> textureValue;
+	//std::weak_ptr<Texture> textureValue;
 };
 #endif // !_MATERIAL_ATTRIBUTE_H_
 

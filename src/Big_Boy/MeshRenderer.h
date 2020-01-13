@@ -1,6 +1,4 @@
-#pragma once
-#ifndef _MESH_RENDERER_H_
-#define _MESH_RENDERER_H_
+
 
 #include <SDL2/SDL.h>
 #include <GL/glew.h>
@@ -8,12 +6,15 @@
 #include <memory>
 #include <exception>
 #include "Material.h"
+#include "Component.h"
 
-class MeshRenderer
+
+
+class MeshRenderer : public Component
 {
 public:
 
-	void Init();
+	void onInit();
 	void onDisplay();
 private:
 	GLuint programId;
@@ -25,5 +26,4 @@ private:
 	std::shared_ptr<Material> getMaterial;
 };
 
-#endif // !_MESH_RENDERER_H_
 

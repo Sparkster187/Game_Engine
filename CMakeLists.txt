@@ -18,7 +18,35 @@ src/Big_Boy/Screen.h
 src/Big_Boy/MeshRenderer.h
 src/Big_Boy/MeshRenderer.cpp
 src/Big_Boy/Core.cpp
+src/Big_Boy/Geppy.h
+src/Big_Boy/Component.cpp
+src/Big_Boy/Entity.cpp
+src/Big_Boy/Camera.h
 )
+
+if(MSVC)
+  target_link_libraries(Big_Boy SDL2 rend OpenAL32)
+else()
+  target_link_libraries(Big_Boy SDL2 rend openal)
+endif()
+
+add_library(rend
+  src/rend/Exception.cpp
+  src/rend/Context.cpp
+  src/rend/Texture.cpp
+  src/rend/RenderTexture.cpp
+  src/rend/Shader.cpp
+  src/rend/Buffer.cpp
+  src/rend/Mesh.cpp
+  src/rend/Util.cpp
+  src/rend/stb_image.h
+)
+if(MSVC)
+  target_link_libraries(rend glew32 opengl32)
+else()
+  target_link_libraries(rend GLEW GL)
+endif()
+
 target_link_libraries(Big_Boy SDL2 opengl32 glew32)
 
 add_executable(Game

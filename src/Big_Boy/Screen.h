@@ -1,6 +1,4 @@
 #pragma once
-#ifndef _SCREEN_H_
-#define _SCREEN_H_
 
 class Screen
 {
@@ -12,5 +10,5 @@ private:
 	unsigned int width;
 	unsigned int height;
 };
-#endif // !_SCREEN_H_
+
 
