@@ -20,7 +20,7 @@ private:
 	GLuint programId;
 	GLuint vaoId;
 	GLuint vboId;
-	GLuint window;
+	SDL_Window * window;
 
 	//std::weak_ptr<Mesh> mesh;
 	std::shared_ptr<Material> getMaterial;

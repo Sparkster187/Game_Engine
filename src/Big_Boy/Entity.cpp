@@ -19,5 +19,10 @@ std::shared_ptr<Core> Entity::getCore()
 
 void Entity::display()
 {
+	for (std::list<std::shared_ptr<Component>>::iterator it = components.begin();
+		it != components.end(); it++)
+	{
+		(*it)->onDisplay();
 
+	}
 }

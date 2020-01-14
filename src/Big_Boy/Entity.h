@@ -30,7 +30,7 @@ public:
 		std::shared_ptr<T> rtn = std::make_shared<T>();
 
 		components.push_back(rtn);
-		rtn->onInitialize(A a);
+		rtn->onInit(A a);
 
 		return rtn;
 	}

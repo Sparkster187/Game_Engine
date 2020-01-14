@@ -48,7 +48,7 @@ void MeshRenderer::onInit()
 		throw std::exception();
 	}
 
-	SDL_Window *window = SDL_CreateWindow("Lab 4 - Architecture",
+	window = SDL_CreateWindow("Lab 4 - Architecture",
 		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
 		WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
 
@@ -98,7 +98,7 @@ void MeshRenderer::onInit()
 	// Reset the state
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-	GLuint vaoId = 0;
+	vaoId = 0;
 
 	// Create a new VAO on the GPU and bind it
 	glGenVertexArrays(1, &vaoId);
@@ -145,7 +145,7 @@ void MeshRenderer::onInit()
 		throw std::exception();
 	}
 
-	GLuint programId = glCreateProgram();
+	programId = glCreateProgram();
 	glAttachShader(programId, vertexShaderId);
 	glAttachShader(programId, fragmentShaderId);
 	glBindAttribLocation(programId, 0, "in_Position");
@@ -172,10 +172,10 @@ void MeshRenderer::onInit()
 
 void MeshRenderer::onDisplay()
 {
-	SDL_Window * window;
-	GLuint programId;
-	GLuint vaoId;
-
+	//SDL_Window * window;
+	//GLuint programId;
+	//GLuint vaoId;
+	
 	bool quit = false;
 
 	while (!quit)

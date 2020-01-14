@@ -13,7 +13,9 @@ public:
 	void SetLocalPosition(glm::vec3 position);
 	void SetLocalRotation(glm::vec3 rotation);
 	void SetLocalScale(glm::vec3 scale);
-	glm::mat4 getModelMatrix(glm::vec3 _translate, glm::vec3 _rotate, glm::vec3 _scale);
+	glm::mat4 getModelMatrix();
+	glm::mat4 getViewMatrix();
+
 private:
 	glm::vec3 LocalPosition;
 	glm::vec3 LocalRotation;

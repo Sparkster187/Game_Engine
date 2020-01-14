@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Game\main.cpp">
+    <ClCompile Include="D:\DCMW Engine\Game_Engine\src\Game\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\CMakeLists.txt" />
+    <CustomBuild Include="D:\DCMW Engine\Game_Engine\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{B1AD86AD-54C5-3EA5-888D-361770C30B2B}</UniqueIdentifier>
+      <UniqueIdentifier>{D6B3E918-03EC-3BF4-95BF-AE56E3F2EC6F}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -26,6 +26,7 @@ std::shared_ptr<Entity> Core::addEntity()
 
 void Core::run()
 {
+	running = true;
 	while (running)
 	{
 		for (std::list<std::shared_ptr<Entity>>::iterator it = entities.begin();

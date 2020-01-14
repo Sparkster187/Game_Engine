@@ -22,12 +22,13 @@ src/Big_Boy/Geppy.h
 src/Big_Boy/Component.cpp
 src/Big_Boy/Entity.cpp
 src/Big_Boy/Camera.h
+src/Big_Boy/Transform.cpp
 )
 
 if(MSVC)
-  target_link_libraries(Big_Boy SDL2 rend OpenAL32)
+  target_link_libraries(Big_Boy SDL2 rend)
 else()
-  target_link_libraries(Big_Boy SDL2 rend openal)
+  target_link_libraries(Big_Boy SDL2 rend)
 endif()
 
 add_library(rend
@@ -37,9 +38,15 @@ add_library(rend
   src/rend/RenderTexture.cpp
   src/rend/Shader.cpp
   src/rend/Buffer.cpp
-  src/rend/Mesh.cpp
-  src/rend/Util.cpp
-  src/rend/stb_image.h
+  src/rend/Buffer.h
+  src/rend/Context.h
+  src/rend/Exception.h
+  src/rend/mathutil.h
+  src/rend/rend.h
+  src/rend/RenderTexture.h
+  src/rend/Shader.h
+  src/rend/Texture.h
+  src/rend/TextureAdapter.h
 )
 if(MSVC)
   target_link_libraries(rend glew32 opengl32)
