@@ -4,6 +4,7 @@
 #include "Exception.h"
 #include "Shader.h"
 #include "Buffer.h"
+#include "Mesh.h"
 
 #include <GL/glew.h>
 
@@ -23,6 +24,8 @@ std::sr1::shared_ptr<Context> Context::initialize()
 
   return rtn;
 }
+
+std::sr1::shared_ptr<Context> context = Context::initialize();
 
 std::sr1::shared_ptr<Shader> Context::createShader()
 {
@@ -93,6 +96,14 @@ std::sr1::shared_ptr<Buffer> Context::createBuffer()
   std::sr1::shared_ptr<Buffer> rtn = std::sr1::make_shared<Buffer>();
   rtn->context = self.lock();
   rtn->id = id;
+
+  return rtn;
+}
+
+std::sr1::shared_ptr<Mesh> Context::createMesh()
+{
+  std::sr1::shared_ptr<Mesh> rtn = std::sr1::make_shared<Mesh>();
+  rtn->context = self.lock();
 
   return rtn;
 }

@@ -15,6 +15,7 @@ public:
 	void SetLocalScale(glm::vec3 scale);
 	glm::mat4 getModelMatrix();
 	glm::mat4 getViewMatrix();
+	glm::mat4 getProjectionMatrix();
 
 private:
 	glm::vec3 LocalPosition;

@@ -8,8 +8,6 @@
 #include "Material.h"
 #include "Component.h"
 
-
-
 class MeshRenderer : public Component
 {
 public:

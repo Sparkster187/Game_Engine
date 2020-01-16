@@ -1,13 +1,19 @@
 #include <SDL2/SDL.h>
 #include <GL/glew.h>
 
+#include "rend\rend.h"
+#include "sr1\memory"
+#include "rend\Context.h"
+#include "rend\Shader.h"
+
+#include "Transform.h"
 #include "MeshRenderer.h"
 #include <exception>
 
 #define WINDOW_WIDTH 640
 #define WINDOW_HEIGHT 480
 
-
+using namespace rend;
 const GLfloat positions[] = {
   0.0f, 0.5f, 0.0f,
   -0.5f, -0.5f, 0.0f,
@@ -23,6 +29,7 @@ const GLfloat colors[] = {
 const GLchar *vertexShaderSrc =
 "attribute vec3 in_Position;" \
 "attribute vec4 in_Color;" \
+"attribute mat4 in_Model;" \
 "" \
 "varying vec4 ex_Color;" \
 "" \
@@ -61,6 +68,9 @@ void MeshRenderer::onInit()
 	{
 		throw std::exception();
 	}
+
+	
+	rend::Shader shader->setUniform("in_Model", getTransform()->getModelMatrix);
 
 	GLuint positionsVboId = 0;
 
@@ -201,6 +211,7 @@ void MeshRenderer::onDisplay()
 		glBindVertexArray(0);
 		glUseProgram(0);
 
+		
 		SDL_GL_SwapWindow(window);
 	}
 

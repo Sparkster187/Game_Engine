@@ -1,7 +1,7 @@
 #pragma once
 
 #ifndef _KEYBOARD_H_
-#define _KEyBOARD_H_
+#define _KEYBOARD_H_
 
 #include <memory>
 #include <vector>
