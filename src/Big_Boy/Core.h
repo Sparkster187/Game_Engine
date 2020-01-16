@@ -4,7 +4,7 @@
 #include <vector>
 
 #include "rend/rend.h"
-#include "rend/Context.h"
+
 
 class Entity;
 class Environment;
@@ -21,7 +21,8 @@ public:
 	void stop();
 	std::shared_ptr<Entity> addEntity();
 	void run();
-	std::shared_ptr<Core> getContext();
+	std::shared_ptr<rend::Context> getContext();
+	std::shared_ptr<Core> createShader();
 
 private:
 	std::shared_ptr<Environment> environment;
@@ -30,5 +31,6 @@ private:
 	std::list<std::shared_ptr<Entity>> entities;
 	std::weak_ptr<Core> self;
 	std::shared_ptr<rend::Context> context; // make this work
+	std::shared_ptr<rend::Shader> shader;
 	bool running;
 };

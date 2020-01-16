@@ -3,8 +3,6 @@
 
 #include "rend\rend.h"
 #include "sr1\memory"
-#include "rend\Context.h"
-#include "rend\Shader.h"
 
 #include "Component.h"
 #include "Core.h"
@@ -29,7 +27,8 @@ const GLfloat colors[] = {
   0.0f, 0.0f, 1.0f, 1.0f
 };
 
-const GLchar *vertexShaderSrc =
+const GLchar *src =
+"\n#ifdef VERTEX \n;" \
 "attribute vec3 in_Position;" \
 "attribute vec4 in_Color;" \
 "attribute mat4 in_Model;" \
@@ -41,14 +40,14 @@ const GLchar *vertexShaderSrc =
 "  gl_Position = vec4(in_Position, 1.0);" \
 "  ex_Color = in_Color;" \
 "}" \
-"";
-
-const GLchar *fragmentShaderSrc =
+"\n#endif \n"\
+"\n#ifdef FRAGMENT \n"\
 "varying vec4 ex_Color;" \
 "void main()" \
 "{" \
 "  gl_FragColor = ex_Color;" \
 "}" \
+"\n#endif\n" \
 "";
 
 void MeshRenderer::onInit()
@@ -72,11 +71,11 @@ void MeshRenderer::onInit()
 		throw std::exception();
 	}
 	
-	context = getCore()->getContext();
+	std::shared_ptr<rend::Context> context = getCore()->getContext();
 	std::sr1::shared_ptr<Mesh> shape = context->createMesh();
-	
-	rend::Shader shader->setUniform("in_Model", getTransform()->getModelMatrix);
-
+	shader = context->createShader();
+	shader->setUniform("in_Model", getTransform()->getModelMatrix);
+	shader->parse(*src);
 	GLuint positionsVboId = 0;
 
 	// Create a new VBO on the GPU and bind it

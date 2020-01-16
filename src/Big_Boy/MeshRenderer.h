@@ -19,6 +19,7 @@ private:
 	GLuint vaoId;
 	GLuint vboId;
 	SDL_Window * window;
+	std::shared_ptr<rend::Shader> shader;
 
 	//std::weak_ptr<Mesh> mesh;
 	std::shared_ptr<Material> getMaterial;

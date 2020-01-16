@@ -25,7 +25,6 @@ std::sr1::shared_ptr<Context> Context::initialize()
   return rtn;
 }
 
-//std::sr1::shared_ptr<Context> context = Context::initialize();
 
 std::sr1::shared_ptr<Shader> Context::createShader()
 {

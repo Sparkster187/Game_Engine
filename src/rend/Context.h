@@ -18,7 +18,6 @@ struct Context
   std::sr1::shared_ptr<Buffer> createBuffer();
   std::sr1::shared_ptr<Mesh> createMesh();
   std::sr1::shared_ptr<RenderTexture> createRenderTexture();
-  std::sr1::shared_ptr<Context> context;
 
 private:
   std::sr1::weak_ptr<Context> self;

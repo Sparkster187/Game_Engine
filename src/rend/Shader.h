@@ -38,7 +38,6 @@ struct Shader : public std::sr1::noncopyable
   void setAttribute(const std::string& variable, const std::sr1::shared_ptr<Buffer>& value);
   void setSampler(const std::string& variable, const std::sr1::shared_ptr<TextureAdapter>& value);
   void setMesh(const std::sr1::shared_ptr<Mesh>& value);
-  std::sr1::shared_ptr<Shader>shader(GLchar _vertexShader, GLchar _fragmentShader);
 
 private:
   friend struct Context;

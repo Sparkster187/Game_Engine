@@ -3,7 +3,6 @@
 
 #include <list>
 
-
 #include "Core.h"
 #include "Entity.h"
 
@@ -49,7 +48,12 @@ void Core::run()
 	}
 }
 
-std::shared_ptr<Core> Core::getContext()
+std::shared_ptr<rend::Context> Core::getContext()
 {
-	return std::shared_ptr<Core>();
+	return context;
+}
+
+std::shared_ptr<Core> Core::createShader()
+{
+
 }
