@@ -3,14 +3,19 @@
 
 #include <list>
 
+
 #include "Core.h"
 #include "Entity.h"
+
+using namespace rend;
 
 std::shared_ptr<Core> Core::Initialize()
 {
 	std::shared_ptr<Core> rtn = std::make_shared<Core>();
+	
 
 	rtn->self = rtn;
+	rtn->context = Context::initialize();
 	return rtn;
 }
 
@@ -42,4 +47,9 @@ void Core::run()
 		}
 		//post display stuff
 	}
+}
+
+std::shared_ptr<Core> Core::getContext()
+{
+	return std::shared_ptr<Core>();
 }

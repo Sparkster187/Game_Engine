@@ -1,9 +1,0 @@
-﻿  Building Custom Rule C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/CMakeLists.txt
-  dummy.cpp
-  Transform.cpp
-  MeshRenderer.cpp
-  Core.cpp
-  Component.cpp
-  Entity.cpp
-  Generating Code...
-  Big_Boy.vcxproj -> C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\Debug\Big_Boy.lib

@@ -6,6 +6,9 @@
 #include "rend\Context.h"
 #include "rend\Shader.h"
 
+#include "Component.h"
+#include "Core.h"
+#include "Entity.h"
 #include "Transform.h"
 #include "MeshRenderer.h"
 #include <exception>
@@ -68,7 +71,9 @@ void MeshRenderer::onInit()
 	{
 		throw std::exception();
 	}
-
+	
+	context = getCore()->getContext();
+	std::sr1::shared_ptr<Mesh> shape = context->createMesh();
 	
 	rend::Shader shader->setUniform("in_Model", getTransform()->getModelMatrix);
 

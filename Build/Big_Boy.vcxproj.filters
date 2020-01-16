@@ -1,75 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\dummy.cpp">
+    <ClCompile Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\dummy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\MeshRenderer.cpp">
+    <ClCompile Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\MeshRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Core.cpp">
+    <ClCompile Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Component.cpp">
+    <ClCompile Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Component.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Entity.cpp">
+    <ClCompile Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Transform.cpp">
+    <ClCompile Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Transform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Component.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Component.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Core.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Entity.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Environment.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Environment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Keyboard.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Keyboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Resources.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Resources.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Material.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Material.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Transform.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Transform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\MaterialAttribute.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\MaterialAttribute.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Screen.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Screen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\MeshRenderer.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\MeshRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Geppy.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Geppy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Big_Boy\Camera.h">
+    <ClInclude Include="D:\DCMW Engine\Game_Engine\src\Big_Boy\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\CMakeLists.txt" />
+    <CustomBuild Include="D:\DCMW Engine\Game_Engine\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{CDE0397D-177F-332D-AEB3-4517961165EB}</UniqueIdentifier>
+      <UniqueIdentifier>{BC0C9CFE-7531-3DDC-AABF-669DB1C08FCE}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{B1AD86AD-54C5-3EA5-888D-361770C30B2B}</UniqueIdentifier>
+      <UniqueIdentifier>{D6B3E918-03EC-3BF4-95BF-AE56E3F2EC6F}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
