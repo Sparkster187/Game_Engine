@@ -14,7 +14,7 @@ class Component;
 
 class Core
 {
-	friend class MeshRenderer;
+	//friend class MeshRenderer;
 public:
 	
 	static std::shared_ptr<Core> Initialize();

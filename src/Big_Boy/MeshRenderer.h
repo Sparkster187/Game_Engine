@@ -12,6 +12,13 @@ class MeshRenderer : public Component
 {
 public:
 
+	
+	~MeshRenderer()
+	{
+		SDL_DestroyWindow(window);
+		SDL_Quit();
+	}
+
 	void loadObject(const char* path);
 	void loadTexture(const char* path);
 	void onInit();

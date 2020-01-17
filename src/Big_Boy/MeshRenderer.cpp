@@ -6,14 +6,10 @@
 #include <iostream>
 #include <fstream>
 
-#include "rend\rend.h"
-#include "sr1\memory"
+#include <rend\rend.h>
+#include <sr1\memory>
 
-#include "Component.h"
-#include "Core.h"
-#include "Entity.h"
-#include "Transform.h"
-#include "MeshRenderer.h"
+#include "Geppy.h"
 #include <exception>
 
 #define WINDOW_WIDTH 640
@@ -47,8 +43,8 @@ const GLchar *src =
 "\n" \
 "void main() \n" \
 "{ \n" \
-"  gl_Position = u_Projection * \n" \
-"    u_Model * vec4(a_Position, 1); \n" \
+"  gl_Position = u_Projection * u_Model * vec4(a_Position, 1);" \
+" \n" \
 "\n" \
 "  v_Normal = a_Normal; \n" \
 "  v_TexCoord = a_TexCoord; \n" \
@@ -92,130 +88,125 @@ void MeshRenderer::onInit()
 		throw std::exception();
 	}
 	
-	std::shared_ptr<rend::Context> context = getCore()->getContext();
-	std::sr1::shared_ptr<Mesh> shape = context->createMesh();
-	shader = context->createShader();
-	
-	shader->parse(src);
 
-	GLuint positionsVboId = 0;
+	//GLuint positionsVboId = 0;
 
-	// Create a new VBO on the GPU and bind it
-	glGenBuffers(1, &positionsVboId);
+	//// Create a new VBO on the GPU and bind it
+	//glGenBuffers(1, &positionsVboId);
 
-	if (!positionsVboId)
-	{
-		throw std::exception();
-	}
+	//if (!positionsVboId)
+	//{
+	//	throw std::exception();
+	//}
 
-	glBindBuffer(GL_ARRAY_BUFFER, positionsVboId);
+	//glBindBuffer(GL_ARRAY_BUFFER, positionsVboId);
 
-	// Upload a copy of the data from memory into the new VBO
-	glBufferData(GL_ARRAY_BUFFER, sizeof(positions), positions, GL_STATIC_DRAW);
+	//// Upload a copy of the data from memory into the new VBO
+	//glBufferData(GL_ARRAY_BUFFER, sizeof(positions), positions, GL_STATIC_DRAW);
 
-	// Reset the state
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	//// Reset the state
+	//glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-	GLuint colorsVboId = 0;
+	//GLuint colorsVboId = 0;
 
-	// Create a colors VBO on the GPU and bind it
-	glGenBuffers(1, &colorsVboId);
+	//// Create a colors VBO on the GPU and bind it
+	//glGenBuffers(1, &colorsVboId);
 
-	if (!colorsVboId)
-	{
-		throw std::exception();
-	}
+	//if (!colorsVboId)
+	//{
+	//	throw std::exception();
+	//}
 
-	glBindBuffer(GL_ARRAY_BUFFER, colorsVboId);
+	//glBindBuffer(GL_ARRAY_BUFFER, colorsVboId);
 
-	// Upload a copy of the data from memory into the new VBO
-	glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
+	//// Upload a copy of the data from memory into the new VBO
+	//glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
 
-	// Reset the state
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	//// Reset the state
+	//glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-	vaoId = 0;
+	//vaoId = 0;
 
-	// Create a new VAO on the GPU and bind it
-	glGenVertexArrays(1, &vaoId);
+	//// Create a new VAO on the GPU and bind it
+	//glGenVertexArrays(1, &vaoId);
 
-	if (!vaoId)
-	{
-		throw std::exception();
-	}
+	//if (!vaoId)
+	//{
+	//	throw std::exception();
+	//}
 
-	glBindVertexArray(vaoId);
+	//glBindVertexArray(vaoId);
 
-	// Bind the position VBO, assign it to position 0 on the bound VAO and flag it to be used
-	glBindBuffer(GL_ARRAY_BUFFER, positionsVboId);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (void *)0);
-	glEnableVertexAttribArray(0);
+	//// Bind the position VBO, assign it to position 0 on the bound VAO and flag it to be used
+	//glBindBuffer(GL_ARRAY_BUFFER, positionsVboId);
+	//glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (void *)0);
+	//glEnableVertexAttribArray(0);
 
-	// Bind the color VBO, assign it to position 1 on the bound VAO and flag it to be used
-	glBindBuffer(GL_ARRAY_BUFFER, colorsVboId);
-	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), (void *)0);
-	glEnableVertexAttribArray(1);
+	//// Bind the color VBO, assign it to position 1 on the bound VAO and flag it to be used
+	//glBindBuffer(GL_ARRAY_BUFFER, colorsVboId);
+	//glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), (void *)0);
+	//glEnableVertexAttribArray(1);
 
-	// Reset the state
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glBindVertexArray(0);
+	//// Reset the state
+	//glBindBuffer(GL_ARRAY_BUFFER, 0);
+	//glBindVertexArray(0);
 
-	GLuint vertexShaderId = glCreateShader(GL_VERTEX_SHADER);
-	glShaderSource(vertexShaderId, 1, &src, NULL);
-	glCompileShader(vertexShaderId);
-	GLint success = 0;
-	glGetShaderiv(vertexShaderId, GL_COMPILE_STATUS, &success);
+	//GLuint vertexShaderId = glCreateShader(GL_VERTEX_SHADER);
+	//glShaderSource(vertexShaderId, 1, &src, NULL);
+	//glCompileShader(vertexShaderId);
+	//GLint success = 0;
+	//glGetShaderiv(vertexShaderId, GL_COMPILE_STATUS, &success);
 
-	if (!success)
-	{
-		throw std::exception();
-	}
+	//if (!success)
+	//{
+	//	throw std::exception();
+	//}
 
-	GLuint fragmentShaderId = glCreateShader(GL_FRAGMENT_SHADER);
-	glShaderSource(fragmentShaderId, 1, &src, NULL);
-	glCompileShader(fragmentShaderId);
-	glGetShaderiv(fragmentShaderId, GL_COMPILE_STATUS, &success);
+	//GLuint fragmentShaderId = glCreateShader(GL_FRAGMENT_SHADER);
+	//glShaderSource(fragmentShaderId, 1, &src, NULL);
+	//glCompileShader(fragmentShaderId);
+	//glGetShaderiv(fragmentShaderId, GL_COMPILE_STATUS, &success);
 
-	if (!success)
-	{
-		throw std::exception();
-	}
+	//if (!success)
+	//{
+	//	throw std::exception();
+	//}
 
-	programId = glCreateProgram();
-	glAttachShader(programId, vertexShaderId);
-	glAttachShader(programId, fragmentShaderId);
-	glBindAttribLocation(programId, 0, "in_Position");
-	glBindAttribLocation(programId, 1, "in_Color");
+	//programId = glCreateProgram();
+	//glAttachShader(programId, vertexShaderId);
+	//glAttachShader(programId, fragmentShaderId);
+	//glBindAttribLocation(programId, 0, "in_Position");
+	//glBindAttribLocation(programId, 1, "in_Color");
 
-	if (glGetError() != GL_NO_ERROR)
-	{
-		throw std::exception();
-	}
+	//if (glGetError() != GL_NO_ERROR)
+	//{
+	//	throw std::exception();
+	//}
 
-	glLinkProgram(programId);
-	glGetProgramiv(programId, GL_LINK_STATUS, &success);
+	//glLinkProgram(programId);
+	//glGetProgramiv(programId, GL_LINK_STATUS, &success);
 
-	if (!success)
-	{
-		throw std::exception();
-	}
+	//if (!success)
+	//{
+	//	throw std::exception();
+	//}
 
-	glDetachShader(programId, vertexShaderId);
-	glDeleteShader(vertexShaderId);
-	glDetachShader(programId, fragmentShaderId);
-	glDeleteShader(fragmentShaderId);
+	//glDetachShader(programId, vertexShaderId);
+	//glDeleteShader(vertexShaderId);
+	//glDetachShader(programId, fragmentShaderId);
+	//glDeleteShader(fragmentShaderId);
 }
 
 void MeshRenderer::loadObject(const char* path)
 {
-	std::shared_ptr<Context> context = Context::initialize();
-	shader = context->createShader();
-	shader->parse(src);
+	std::shared_ptr<Context> context = getCore()->getContext();// context is created
+	shader = context->createShader();// shader uses context to get the createShader function
+	shader->parse(src);//points to the vertex and fragment shader so that they get the information they need
 
-	shape = context->createMesh();
+	shape = context->createMesh();//shape uses context to get the data from createMesh function
 	{
-		std::ifstream f;
-		f.open("samples\curuthers\curuthers.obj");
+		std::ifstream f;// create an input stream variable
+		f.open(path);//variable then checks the path
 		std::string obj;
 		std::string line;
 
@@ -225,20 +216,20 @@ void MeshRenderer::loadObject(const char* path)
 			obj += line + "\n";
 		}
 
-		shape->parse(obj);
+		shape->parse(obj);// points to the object file data
 	}
 }
 
 void MeshRenderer::loadTexture(const char* path)
 {
-	std::shared_ptr<Context> context = Context::initialize();
-	std::sr1::shared_ptr<rend::Texture> texture = context->createTexture();
+	std::shared_ptr<Context> context = getCore()->getContext();
+	std::shared_ptr<Texture> texture = context->createTexture();
 	{
 		int w = 0;
 		int h = 0;
 		int bpp = 0;
 
-		unsigned char *data = stbi_load("samples\curuthers\Whiskers_diffuse.png",
+		unsigned char *data = stbi_load(path,
 			&w, &h, &bpp, 3);
 
 		if (!data)
@@ -302,7 +293,7 @@ void MeshRenderer::onDisplay()
 			rotate(glm::mat4(1.0f), radians(angle), vec3(0, 1, 0))
 		);
 
-		shader->setMesh(shape); //need to find a way to get shape
+		shader->setMesh(shape); //
 		shader->render();
 
 		glUseProgram(programId);
@@ -317,6 +308,8 @@ void MeshRenderer::onDisplay()
 		SDL_GL_SwapWindow(window);
 	}
 
-	SDL_DestroyWindow(window);
-	SDL_Quit();
+	MeshRenderer::~MeshRenderer();
+	// Have this in a destructor
+	/*SDL_DestroyWindow(window);
+	SDL_Quit();*/
 }
