@@ -2,6 +2,7 @@
 
 #include <memory>
 #include <vector>
+#include <list>
 
 #include "rend/rend.h"
 
@@ -23,6 +24,7 @@ public:
 	void run();
 	std::shared_ptr<rend::Context> getContext();
 	std::shared_ptr<Core> createShader();
+	
 
 private:
 	std::shared_ptr<Environment> environment;
@@ -30,7 +32,10 @@ private:
 	std::shared_ptr<Keyboard> keyboard;
 	std::list<std::shared_ptr<Entity>> entities;
 	std::weak_ptr<Core> self;
-	std::shared_ptr<rend::Context> context; // make this work
+	std::shared_ptr<rend::Context> context; 
 	std::shared_ptr<rend::Shader> shader;
+	std::shared_ptr<rend::Texture> texture;
+	
+
 	bool running;
 };

@@ -1,5 +1,10 @@
+#define STB_IMAGE_IMPLEMENTATION
+#include "rend/stb_image.h"
+
 #include <SDL2/SDL.h>
 #include <GL/glew.h>
+#include <iostream>
+#include <fstream>
 
 #include "rend\rend.h"
 #include "sr1\memory"
@@ -28,27 +33,43 @@ const GLfloat colors[] = {
 };
 
 const GLchar *src =
-"\n#ifdef VERTEX \n;" \
-"attribute vec3 in_Position;" \
-"attribute vec4 in_Color;" \
-"attribute mat4 in_Model;" \
-"" \
-"varying vec4 ex_Color;" \
-"" \
-"void main()" \
-"{" \
-"  gl_Position = vec4(in_Position, 1.0);" \
-"  ex_Color = in_Color;" \
-"}" \
-"\n#endif \n"\
-"\n#ifdef FRAGMENT \n"\
-"varying vec4 ex_Color;" \
-"void main()" \
-"{" \
-"  gl_FragColor = ex_Color;" \
-"}" \
-"\n#endif\n" \
-"";
+"#ifdef VERTEX \n" \
+"\n" \
+"attribute vec3 a_Position; \n" \
+"attribute vec2 a_TexCoord; \n" \
+"attribute vec3 a_Normal; \n" \
+"\n" \
+"uniform mat4 u_Projection; \n" \
+"uniform mat4 u_Model; \n" \
+"\n" \
+"varying vec3 v_Normal; \n" \
+"varying vec2 v_TexCoord; \n" \
+"\n" \
+"void main() \n" \
+"{ \n" \
+"  gl_Position = u_Projection * \n" \
+"    u_Model * vec4(a_Position, 1); \n" \
+"\n" \
+"  v_Normal = a_Normal; \n" \
+"  v_TexCoord = a_TexCoord; \n" \
+"} \n" \
+"\n" \
+"#endif \n" \
+"#ifdef FRAGMENT \n" \
+"\n" \
+"uniform sampler2D u_Texture; \n" \
+"\n" \
+"varying vec3 v_Normal; \n" \
+"varying vec2 v_TexCoord; \n" \
+"\n" \
+"void main() \n" \
+"{ \n" \
+"  gl_FragColor = texture2D(u_Texture, v_TexCoord); \n" \
+"  if(gl_FragColor.x == 9) gl_FragColor.x = v_Normal.x; \n" \
+"} \n" \
+"\n" \
+"#endif \n";
+
 
 void MeshRenderer::onInit()
 {
@@ -57,7 +78,7 @@ void MeshRenderer::onInit()
 		throw std::exception();
 	}
 
-	window = SDL_CreateWindow("Lab 4 - Architecture",
+	window = SDL_CreateWindow("Demo",
 		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
 		WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
 
@@ -74,8 +95,9 @@ void MeshRenderer::onInit()
 	std::shared_ptr<rend::Context> context = getCore()->getContext();
 	std::sr1::shared_ptr<Mesh> shape = context->createMesh();
 	shader = context->createShader();
-	shader->setUniform("in_Model", getTransform()->getModelMatrix);
-	shader->parse(*src);
+	
+	shader->parse(src);
+
 	GLuint positionsVboId = 0;
 
 	// Create a new VBO on the GPU and bind it
@@ -139,7 +161,7 @@ void MeshRenderer::onInit()
 	glBindVertexArray(0);
 
 	GLuint vertexShaderId = glCreateShader(GL_VERTEX_SHADER);
-	glShaderSource(vertexShaderId, 1, &vertexShaderSrc, NULL);
+	glShaderSource(vertexShaderId, 1, &src, NULL);
 	glCompileShader(vertexShaderId);
 	GLint success = 0;
 	glGetShaderiv(vertexShaderId, GL_COMPILE_STATUS, &success);
@@ -150,7 +172,7 @@ void MeshRenderer::onInit()
 	}
 
 	GLuint fragmentShaderId = glCreateShader(GL_FRAGMENT_SHADER);
-	glShaderSource(fragmentShaderId, 1, &fragmentShaderSrc, NULL);
+	glShaderSource(fragmentShaderId, 1, &src, NULL);
 	glCompileShader(fragmentShaderId);
 	glGetShaderiv(fragmentShaderId, GL_COMPILE_STATUS, &success);
 
@@ -184,6 +206,67 @@ void MeshRenderer::onInit()
 	glDeleteShader(fragmentShaderId);
 }
 
+void MeshRenderer::loadObject(const char* path)
+{
+	std::shared_ptr<Context> context = Context::initialize();
+	shader = context->createShader();
+	shader->parse(src);
+
+	shape = context->createMesh();
+	{
+		std::ifstream f;
+		f.open("samples\curuthers\curuthers.obj");
+		std::string obj;
+		std::string line;
+
+		while (!f.eof())
+		{
+			std::getline(f, line);
+			obj += line + "\n";
+		}
+
+		shape->parse(obj);
+	}
+}
+
+void MeshRenderer::loadTexture(const char* path)
+{
+	std::shared_ptr<Context> context = Context::initialize();
+	std::sr1::shared_ptr<rend::Texture> texture = context->createTexture();
+	{
+		int w = 0;
+		int h = 0;
+		int bpp = 0;
+
+		unsigned char *data = stbi_load("samples\curuthers\Whiskers_diffuse.png",
+			&w, &h, &bpp, 3);
+
+		if (!data)
+		{
+			throw rend::Exception("Failed to open image");
+		}
+
+		texture->setSize(w, h);
+
+		for (int y = 0; y < h; y++)
+		{
+			for (int x = 0; x < w; x++)
+			{
+				int r = y * w * 3 + x * 3;
+
+				texture->setPixel(x, y, vec3(
+					data[r] / 255.0f,
+					data[r + 1] / 255.0f,
+					data[r + 2] / 255.0f));
+			}
+		}
+		stbi_image_free(data);
+	}
+
+	
+	shape->setTexture("u_Texture", texture);
+}
+
 void MeshRenderer::onDisplay()
 {
 	//SDL_Window * window;
@@ -196,6 +279,8 @@ void MeshRenderer::onDisplay()
 	{
 		SDL_Event event = { 0 };
 
+		float angle = 0;
+
 		while (SDL_PollEvent(&event))
 		{
 			if (event.type == SDL_QUIT)
@@ -203,9 +288,22 @@ void MeshRenderer::onDisplay()
 				quit = true;
 			}
 		}
+		
+		angle++;
 
 		glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
+
+		shader->setUniform("u_Projection", perspective(radians(45.0f), 1.0f, 0.1f, 100.0f));//projection matrix
+
+		//shader->setUniform("u_Model", getTransform()->getModelMatrix);
+		shader->setUniform("u_Model",
+			translate(glm::mat4(1.0f), vec3(0, 0, -10)) *
+			rotate(glm::mat4(1.0f), radians(angle), vec3(0, 1, 0))
+		);
+
+		shader->setMesh(shape); //need to find a way to get shape
+		shader->render();
 
 		glUseProgram(programId);
 		glBindVertexArray(vaoId);

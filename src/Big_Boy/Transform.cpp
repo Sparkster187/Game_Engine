@@ -1,5 +1,4 @@
 #include "Big_Boy\Transform.h"
-#include "glm\ext.hpp"
 
 glm::mat4 Transform::getModelMatrix()
 {
@@ -21,3 +20,8 @@ glm::mat4 Transform::getViewMatrix()
 	glm::mat4 tmp = getModelMatrix();
 	return glm::inverse(tmp);
 }
+
+//glm::mat4 Transform::getProjectionMatrix()
+//{
+//	glm::mat4 tmp = glm::perspective(radians(45.0f), 1.0f, 0.1f, 100.0f);
+//}

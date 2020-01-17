@@ -55,5 +55,6 @@ std::shared_ptr<rend::Context> Core::getContext()
 
 std::shared_ptr<Core> Core::createShader()
 {
-
+	return 0;
 }
+

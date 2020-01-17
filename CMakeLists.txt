@@ -50,7 +50,9 @@ add_library(rend
   src/rend/Util.cpp
   src/rend/Util.h
   src/rend/Mesh.h
+  src/rend/stb_image.h
 )
+
 if(MSVC)
   target_link_libraries(rend glew32 opengl32)
 else()

@@ -33,10 +33,6 @@ struct VariableInfo
   static std::string convertType(GLenum type);
 };
 
-std::sr1::shared_ptr<Shader> shader(GLchar _vertexShader, GLchar _fragmentShader)
-{
-
-}
 std::string VariableInfo::convertType(GLenum type)
 {
   if(type == GL_FLOAT) return "GL_FLOAT";
