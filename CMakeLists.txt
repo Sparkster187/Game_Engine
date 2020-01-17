@@ -23,6 +23,7 @@ src/Big_Boy/Component.cpp
 src/Big_Boy/Entity.cpp
 src/Big_Boy/Camera.h
 src/Big_Boy/Transform.cpp
+src/Big_Boy/Camera.cpp
 )
 
 if(MSVC)
@@ -51,6 +52,7 @@ add_library(rend
   src/rend/Util.h
   src/rend/Mesh.h
   src/rend/stb_image.h
+  src/rend/Mesh.cpp
 )
 
 if(MSVC)

@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F8A2475E-F9CF-3F09-8059-E8F0A2FC3530}</ProjectGuid>
+    <ProjectGuid>{11A81282-132D-3E92-BB7C-AB133A4A0CEF}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
@@ -56,25 +56,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\DCMW Engine\Game_Engine\Build\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Game.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Game</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\DCMW Engine\Game_Engine\Build\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Game.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Game</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\DCMW Engine\Game_Engine\Build\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Game.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Game</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\DCMW Engine\Game_Engine\Build\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Game.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Game</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
@@ -83,7 +83,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\gep_sdk\include\msvc;C:\Users\gep_sdk\include\common;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\gep_sdk\include\msvc;D:\gep_sdk\include\common;D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -101,10 +101,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -113,12 +113,12 @@
     </Midl>
     <Link>
       <AdditionalDependencies>Debug\Big_Boy.lib;SDL2.lib;Debug\rend.lib;opengl32.lib;glew32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);C:/Users/gep_sdk/lib/msvc</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);D:/gep_sdk/lib/msvc</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/Debug/Game.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/Debug/Game.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/DCMW Engine/Game_Engine/Build/Debug/Game.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DCMW Engine/Game_Engine/Build/Debug/Game.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -127,7 +127,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\gep_sdk\include\msvc;C:\Users\gep_sdk\include\common;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\gep_sdk\include\msvc;D:\gep_sdk\include\common;D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -145,10 +145,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -157,12 +157,12 @@
     </Midl>
     <Link>
       <AdditionalDependencies>Release\Big_Boy.lib;SDL2.lib;Release\rend.lib;opengl32.lib;glew32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);C:/Users/gep_sdk/lib/msvc</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);D:/gep_sdk/lib/msvc</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/Release/Game.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/Release/Game.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/DCMW Engine/Game_Engine/Build/Release/Game.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DCMW Engine/Game_Engine/Build/Release/Game.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\gep_sdk\include\msvc;C:\Users\gep_sdk\include\common;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\gep_sdk\include\msvc;D:\gep_sdk\include\common;D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -189,10 +189,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -201,12 +201,12 @@
     </Midl>
     <Link>
       <AdditionalDependencies>MinSizeRel\Big_Boy.lib;SDL2.lib;MinSizeRel\rend.lib;opengl32.lib;glew32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);C:/Users/gep_sdk/lib/msvc</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);D:/gep_sdk/lib/msvc</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/MinSizeRel/Game.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/MinSizeRel/Game.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/DCMW Engine/Game_Engine/Build/MinSizeRel/Game.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DCMW Engine/Game_Engine/Build/MinSizeRel/Game.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -215,7 +215,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\gep_sdk\include\msvc;C:\Users\gep_sdk\include\common;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\gep_sdk\include\msvc;D:\gep_sdk\include\common;D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -232,10 +232,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\DCMW Engine\Game_Engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -244,12 +244,12 @@
     </Midl>
     <Link>
       <AdditionalDependencies>RelWithDebInfo\Big_Boy.lib;SDL2.lib;RelWithDebInfo\rend.lib;opengl32.lib;glew32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);C:/Users/gep_sdk/lib/msvc</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);D:/gep_sdk/lib/msvc</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/RelWithDebInfo/Game.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/RelWithDebInfo/Game.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/DCMW Engine/Game_Engine/Build/RelWithDebInfo/Game.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DCMW Engine/Game_Engine/Build/RelWithDebInfo/Game.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -257,10 +257,10 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/CMakeLists.txt</Message>
+    <CustomBuild Include="D:\DCMW Engine\Game_Engine\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/DCMW Engine/Game_Engine/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-C:\Users\gep_sdk\opt\cmake-3.15.1\bin\cmake.exe "-SC:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine" "-BC:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build" --check-stamp-file "C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/CMakeFiles/generate.stamp"
+D:\gep_sdk\opt\cmake-3.15.1\bin\cmake.exe "-SD:/DCMW Engine/Game_Engine" "-BD:/DCMW Engine/Game_Engine/Build" --check-stamp-file "D:/DCMW Engine/Game_Engine/Build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -268,12 +268,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCXXCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeRCCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeSystem.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCXXCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeRCCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeSystem.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\DCMW Engine\Game_Engine\Build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/DCMW Engine/Game_Engine/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-C:\Users\gep_sdk\opt\cmake-3.15.1\bin\cmake.exe "-SC:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine" "-BC:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build" --check-stamp-file "C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/CMakeFiles/generate.stamp"
+D:\gep_sdk\opt\cmake-3.15.1\bin\cmake.exe "-SD:/DCMW Engine/Game_Engine" "-BD:/DCMW Engine/Game_Engine/Build" --check-stamp-file "D:/DCMW Engine/Game_Engine/Build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -281,12 +281,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCXXCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeRCCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeSystem.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCXXCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeRCCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeSystem.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\DCMW Engine\Game_Engine\Build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/DCMW Engine/Game_Engine/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-C:\Users\gep_sdk\opt\cmake-3.15.1\bin\cmake.exe "-SC:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine" "-BC:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build" --check-stamp-file "C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/CMakeFiles/generate.stamp"
+D:\gep_sdk\opt\cmake-3.15.1\bin\cmake.exe "-SD:/DCMW Engine/Game_Engine" "-BD:/DCMW Engine/Game_Engine/Build" --check-stamp-file "D:/DCMW Engine/Game_Engine/Build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -294,12 +294,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCXXCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeRCCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeSystem.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCXXCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeRCCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeSystem.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\DCMW Engine\Game_Engine\Build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/DCMW Engine/Game_Engine/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-C:\Users\gep_sdk\opt\cmake-3.15.1\bin\cmake.exe "-SC:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine" "-BC:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build" --check-stamp-file "C:/Users/David/Documents/Uni work/DCMW Engine/Game_Engine/Build/CMakeFiles/generate.stamp"
+D:\gep_sdk\opt\cmake-3.15.1\bin\cmake.exe "-SD:/DCMW Engine/Game_Engine" "-BD:/DCMW Engine/Game_Engine/Build" --check-stamp-file "D:/DCMW Engine/Game_Engine/Build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -307,29 +307,29 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCXXCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeRCCompiler.cmake;C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeSystem.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Users\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeCXXCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeRCCompiler.cmake;D:\DCMW Engine\Game_Engine\Build\CMakeFiles\3.15.1\CMakeSystem.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeRCInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\Windows.cmake;D:\gep_sdk\opt\cmake-3.15.1\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\DCMW Engine\Game_Engine\Build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\src\Game\main.cpp" />
+    <ClCompile Include="D:\DCMW Engine\Game_Engine\src\Game\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\ZERO_CHECK.vcxproj">
-      <Project>{A0BB9209-B8DA-308A-8131-86E76AC8F5FE}</Project>
+    <ProjectReference Include="D:\DCMW Engine\Game_Engine\Build\ZERO_CHECK.vcxproj">
+      <Project>{6701750B-5D5F-303B-86B8-9AAB53FE4686}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\Big_Boy.vcxproj">
-      <Project>{12DD5CF7-9A72-343B-96DB-A7BF3D0C29E2}</Project>
+    <ProjectReference Include="D:\DCMW Engine\Game_Engine\Build\Big_Boy.vcxproj">
+      <Project>{A45EEC22-D918-3F88-8D08-C4A44FBF4D9F}</Project>
       <Name>Big_Boy</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\David\Documents\Uni work\DCMW Engine\Game_Engine\Build\rend.vcxproj">
-      <Project>{8861A56F-ADD0-3897-9078-C9E50A853447}</Project>
+    <ProjectReference Include="D:\DCMW Engine\Game_Engine\Build\rend.vcxproj">
+      <Project>{EC91DBB5-49DB-3717-B81B-DE0C79893BE0}</Project>
       <Name>rend</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

@@ -10,9 +10,9 @@ int main()
 	std::shared_ptr<Entity> gameObject = core->addEntity();
 
 	std::shared_ptr<MeshRenderer> triangle = gameObject->addComponent<MeshRenderer>();
-	
-	triangle->loadObject("samples\curuthers\curuthers.obj");
-	triangle->loadTexture("samples\curuthers\Whiskers_diffuse.png");
+	std::shared_ptr<Cam>
+	triangle->loadObject("../samples/curuthers/curuthers.obj");
+	triangle->loadTexture("../samples/curuthers/Whiskers_diffuse.png");
 
 	core->run();
 

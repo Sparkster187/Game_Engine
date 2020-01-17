@@ -9,6 +9,7 @@ class Transform;
 
 class Component
 {
+	friend class Entity;
 public:
 	std::shared_ptr<Entity> getEntity();
 	std::shared_ptr<Core> getCore();

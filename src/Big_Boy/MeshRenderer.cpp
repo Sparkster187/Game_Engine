@@ -3,6 +3,7 @@
 
 #include <SDL2/SDL.h>
 #include <GL/glew.h>
+#include <glm/glm.hpp>
 #include <iostream>
 #include <fstream>
 
@@ -12,8 +13,7 @@
 #include "Geppy.h"
 #include <exception>
 
-#define WINDOW_WIDTH 640
-#define WINDOW_HEIGHT 480
+
 
 using namespace rend;
 const GLfloat positions[] = {
@@ -69,24 +69,7 @@ const GLchar *src =
 
 void MeshRenderer::onInit()
 {
-	if (SDL_Init(SDL_INIT_VIDEO) < 0)
-	{
-		throw std::exception();
-	}
-
-	window = SDL_CreateWindow("Demo",
-		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-		WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
-
-	if (!SDL_GL_CreateContext(window))
-	{
-		throw std::exception();
-	}
-
-	if (glewInit() != GLEW_OK)
-	{
-		throw std::exception();
-	}
+	
 	
 
 	//GLuint positionsVboId = 0;
@@ -210,6 +193,11 @@ void MeshRenderer::loadObject(const char* path)
 		std::string obj;
 		std::string line;
 
+		if (!f.is_open())
+		{
+			abort();
+		}
+
 		while (!f.eof())
 		{
 			std::getline(f, line);
@@ -260,38 +248,11 @@ void MeshRenderer::loadTexture(const char* path)
 
 void MeshRenderer::onDisplay()
 {
-	//SDL_Window * window;
-	//GLuint programId;
-	//GLuint vaoId;
-	
-	bool quit = false;
-
-	while (!quit)
-	{
-		SDL_Event event = { 0 };
-
-		float angle = 0;
-
-		while (SDL_PollEvent(&event))
-		{
-			if (event.type == SDL_QUIT)
-			{
-				quit = true;
-			}
-		}
-		
-		angle++;
-
-		glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
 
 		shader->setUniform("u_Projection", perspective(radians(45.0f), 1.0f, 0.1f, 100.0f));//projection matrix
 
-		//shader->setUniform("u_Model", getTransform()->getModelMatrix);
-		shader->setUniform("u_Model",
-			translate(glm::mat4(1.0f), vec3(0, 0, -10)) *
-			rotate(glm::mat4(1.0f), radians(angle), vec3(0, 1, 0))
-		);
+		shader->setUniform("u_Model", getTransform()->getModelMatrix());
+		//shader->setUniform("u_Model",translate(glm::mat4(1.0f), vec3(0, 0, -10))*rotate(glm::mat4(1.0f), float (radians(angle)), vec3(0, 1, 0)));
 
 		shader->setMesh(shape); //
 		shader->render();
@@ -299,17 +260,13 @@ void MeshRenderer::onDisplay()
 		glUseProgram(programId);
 		glBindVertexArray(vaoId);
 
+		loadObject("../samples/curuthers/curuthers.obj");
+		loadTexture("../samples/curuthers/Whiskers_diffuse.png");
+
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 
 		glBindVertexArray(0);
-		glUseProgram(0);
+		glUseProgram(0);		
 
-		
-		SDL_GL_SwapWindow(window);
-	}
-
-	MeshRenderer::~MeshRenderer();
-	// Have this in a destructor
-	/*SDL_DestroyWindow(window);
-	SDL_Quit();*/
+	
 }
