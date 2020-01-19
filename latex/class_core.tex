@@ -1,0 +1,148 @@
+\hypertarget{class_core}{}\doxysection{Core Class Reference}
+\label{class_core}\index{Core@{Core}}
+
+
+{\ttfamily \#include $<$Core.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_core_a0e1d6754f6c2cabd2cd2862d541fe127}{start}} ()
+\item 
+void \mbox{\hyperlink{class_core_a034f9e2fcfea6cad68318a938fb0c926}{stop}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_entity}{Entity}} $>$ \mbox{\hyperlink{class_core_a82116e66e954e2a4d73c4038413b01f9}{add\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em function for adding entities \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_core_adcc93b561dfefacfe2bcbd60604ea7a6}{run}} ()
+\begin{DoxyCompactList}\small\item\em function that tells the computer what to do when the program is run \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_context}{rend\+::\+Context}} $>$ \mbox{\hyperlink{class_core_a51743056cf9cf07d55b9fa98b04feacb}{get\+Context}} ()
+\begin{DoxyCompactList}\small\item\em function for accessing the context variable and returning it \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_core}{Core}} $>$ \mbox{\hyperlink{class_core_aa115b0dbae6da38b70eec871cee895c7}{create\+Shader}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ \mbox{\hyperlink{class_core_aca2e2af28bd0a7bf7d8ccd91dd3a3ae0}{get\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em function for accessing the camera variable and returning it \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_core}{Core}} $>$ \mbox{\hyperlink{class_core_ab62f686765accb870bbde07184b52bef}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em function for what the program must do when it is started \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_core_a4e573e114bb22dca2eb6567271fd3bb3}{angle}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_core_aeba626af0b56820b14192cd581ebbf77}{Mesh\+Renderer}}
+\item 
+class \mbox{\hyperlink{class_core_ad8bd9afbbd7af19d996da80e9d25890d}{Camera}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_core_a82116e66e954e2a4d73c4038413b01f9}\label{class_core_a82116e66e954e2a4d73c4038413b01f9}} 
+\index{Core@{Core}!addEntity@{addEntity}}
+\index{addEntity@{addEntity}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{addEntity()}{addEntity()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_entity}{Entity}} $>$ Core\+::add\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function for adding entities 
+
+\mbox{\Hypertarget{class_core_aa115b0dbae6da38b70eec871cee895c7}\label{class_core_aa115b0dbae6da38b70eec871cee895c7}} 
+\index{Core@{Core}!createShader@{createShader}}
+\index{createShader@{createShader}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{createShader()}{createShader()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_core}{Core}} $>$ Core\+::create\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_core_aca2e2af28bd0a7bf7d8ccd91dd3a3ae0}\label{class_core_aca2e2af28bd0a7bf7d8ccd91dd3a3ae0}} 
+\index{Core@{Core}!getCamera@{getCamera}}
+\index{getCamera@{getCamera}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ Core\+::get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function for accessing the camera variable and returning it 
+
+\mbox{\Hypertarget{class_core_a51743056cf9cf07d55b9fa98b04feacb}\label{class_core_a51743056cf9cf07d55b9fa98b04feacb}} 
+\index{Core@{Core}!getContext@{getContext}}
+\index{getContext@{getContext}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{getContext()}{getContext()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_context}{rend\+::\+Context}} $>$ Core\+::get\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function for accessing the context variable and returning it 
+
+\mbox{\Hypertarget{class_core_ab62f686765accb870bbde07184b52bef}\label{class_core_ab62f686765accb870bbde07184b52bef}} 
+\index{Core@{Core}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_core}{Core}} $>$ Core\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+function for what the program must do when it is started 
+
+$<$ creates a window and sets its width and heightHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_core_ab62f686765accb870bbde07184b52bef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_core_adcc93b561dfefacfe2bcbd60604ea7a6}\label{class_core_adcc93b561dfefacfe2bcbd60604ea7a6}} 
+\index{Core@{Core}!run@{run}}
+\index{run@{run}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Core\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that tells the computer what to do when the program is run 
+
+$<$ iterator points to the display functionn and runs it\mbox{\Hypertarget{class_core_a0e1d6754f6c2cabd2cd2862d541fe127}\label{class_core_a0e1d6754f6c2cabd2cd2862d541fe127}} 
+\index{Core@{Core}!start@{start}}
+\index{start@{start}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Core\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_core_a034f9e2fcfea6cad68318a938fb0c926}\label{class_core_a034f9e2fcfea6cad68318a938fb0c926}} 
+\index{Core@{Core}!stop@{stop}}
+\index{stop@{stop}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Core\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_core_ad8bd9afbbd7af19d996da80e9d25890d}\label{class_core_ad8bd9afbbd7af19d996da80e9d25890d}} 
+\index{Core@{Core}!Camera@{Camera}}
+\index{Camera@{Camera}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{Camera}{Camera}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_camera}{Camera}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_core_aeba626af0b56820b14192cd581ebbf77}\label{class_core_aeba626af0b56820b14192cd581ebbf77}} 
+\index{Core@{Core}!MeshRenderer@{MeshRenderer}}
+\index{MeshRenderer@{MeshRenderer}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{MeshRenderer}{MeshRenderer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_mesh_renderer}{Mesh\+Renderer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_core_a4e573e114bb22dca2eb6567271fd3bb3}\label{class_core_a4e573e114bb22dca2eb6567271fd3bb3}} 
+\index{Core@{Core}!angle@{angle}}
+\index{angle@{angle}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily float Core\+::angle = 0}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Big\+\_\+\+Boy/\mbox{\hyperlink{_core_8h}{Core.\+h}}\item 
+src/\+Big\+\_\+\+Boy/\mbox{\hyperlink{_core_8cpp}{Core.\+cpp}}\end{DoxyCompactItemize}

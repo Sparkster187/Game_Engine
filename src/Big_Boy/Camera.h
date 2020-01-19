@@ -7,17 +7,14 @@
  
 using namespace rend;
 
+class Entity;
 
-
-class Camera : 
-	public Component
+class Camera : public Component ///< inherits from component
 {
-	
 private:
+	std::weak_ptr<Entity> self; ///< pointer for camera to navigate through the Entity hierarchy 
 
 public:
-	Camera();
-	~Camera();
 
 	glm::mat4 getViewMatrix();
 	glm::mat4 getProjMatrix();

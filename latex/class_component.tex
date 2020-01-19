@@ -1,0 +1,151 @@
+\hypertarget{class_component}{}\doxysection{Component Class Reference}
+\label{class_component}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+
+
+Inheritance diagram for Component\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_component__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_entity}{Entity}} $>$ \mbox{\hyperlink{class_component_a92ef571e1fbb268954c05e0c74c888eb}{get\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em function for getting the value of entity \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_core}{Core}} $>$ \mbox{\hyperlink{class_component_a08a69222c57e5d1399569932f7ea958e}{get\+Core}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_keyboard}{Keyboard}} $>$ \mbox{\hyperlink{class_component_a2ef43189f4359bad845e0409e2b96b79}{get\+Keyboard}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_environment}{Environment}} $>$ \mbox{\hyperlink{class_component_a9d3604de882852d1ead3d4f6b7fb9897}{get\+Environment}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_transform}{Transform}} $>$ \mbox{\hyperlink{class_component_a295ad327921c7b7367be65a97654b69f}{get\+Transform}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_aab73b3c7db7ef0596d6e050ff54612e3}{on\+Init}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_a7ffbee9cd61035ffb5b5795718b4d056}{on\+Tick}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_a752d4d19d7b3b7655bd0eb1b515cba29}{on\+Display}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ace170add0a05f54d1028144fe8711f46}{on\+Post\+Display}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_aa59b42bd442ec224013c266b6509f6b6}{on\+Gui}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_component_a614439ccac0344926adc4c0165d64060}{Entity}}
+\begin{DoxyCompactList}\small\item\em allows the \mbox{\hyperlink{class_entity}{Entity}} class to access the private variables and fuctions \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_component_a08a69222c57e5d1399569932f7ea958e}\label{class_component_a08a69222c57e5d1399569932f7ea958e}} 
+\index{Component@{Component}!getCore@{getCore}}
+\index{getCore@{getCore}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{getCore()}{getCore()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_core}{Core}} $>$ Component\+::get\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_component_a08a69222c57e5d1399569932f7ea958e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_component_a92ef571e1fbb268954c05e0c74c888eb}\label{class_component_a92ef571e1fbb268954c05e0c74c888eb}} 
+\index{Component@{Component}!getEntity@{getEntity}}
+\index{getEntity@{getEntity}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{getEntity()}{getEntity()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_entity}{Entity}} $>$ Component\+::get\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function for getting the value of entity 
+
+\mbox{\Hypertarget{class_component_a9d3604de882852d1ead3d4f6b7fb9897}\label{class_component_a9d3604de882852d1ead3d4f6b7fb9897}} 
+\index{Component@{Component}!getEnvironment@{getEnvironment}}
+\index{getEnvironment@{getEnvironment}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{getEnvironment()}{getEnvironment()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_environment}{Environment}}$>$ Component\+::get\+Environment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_component_a2ef43189f4359bad845e0409e2b96b79}\label{class_component_a2ef43189f4359bad845e0409e2b96b79}} 
+\index{Component@{Component}!getKeyboard@{getKeyboard}}
+\index{getKeyboard@{getKeyboard}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{getKeyboard()}{getKeyboard()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_keyboard}{Keyboard}}$>$ Component\+::get\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_component_a295ad327921c7b7367be65a97654b69f}\label{class_component_a295ad327921c7b7367be65a97654b69f}} 
+\index{Component@{Component}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{getTransform()}{getTransform()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_transform}{Transform}} $>$ Component\+::get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_component_a295ad327921c7b7367be65a97654b69f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_component_a752d4d19d7b3b7655bd0eb1b515cba29}\label{class_component_a752d4d19d7b3b7655bd0eb1b515cba29}} 
+\index{Component@{Component}!onDisplay@{onDisplay}}
+\index{onDisplay@{onDisplay}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{onDisplay()}{onDisplay()}}
+{\footnotesize\ttfamily void Component\+::on\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_mesh_renderer_add8427fa9ba24b40b08dcc734ab1b754}{Mesh\+Renderer}}.
+
+\mbox{\Hypertarget{class_component_aa59b42bd442ec224013c266b6509f6b6}\label{class_component_aa59b42bd442ec224013c266b6509f6b6}} 
+\index{Component@{Component}!onGui@{onGui}}
+\index{onGui@{onGui}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{onGui()}{onGui()}}
+{\footnotesize\ttfamily void Component\+::on\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_component_aab73b3c7db7ef0596d6e050ff54612e3}\label{class_component_aab73b3c7db7ef0596d6e050ff54612e3}} 
+\index{Component@{Component}!onInit@{onInit}}
+\index{onInit@{onInit}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{onInit()}{onInit()}}
+{\footnotesize\ttfamily void Component\+::on\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_mesh_renderer_ae1b2bcbad4a4fba6a62d8175376e5a13}{Mesh\+Renderer}}, \mbox{\hyperlink{class_camera_a344a385fcb4cdf0d4d8c78fb5f2cba16}{Camera}}, and \mbox{\hyperlink{class_transform_a8bfd2334169ec0ff45dc8c7131b48388}{Transform}}.
+
+\mbox{\Hypertarget{class_component_ace170add0a05f54d1028144fe8711f46}\label{class_component_ace170add0a05f54d1028144fe8711f46}} 
+\index{Component@{Component}!onPostDisplay@{onPostDisplay}}
+\index{onPostDisplay@{onPostDisplay}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{onPostDisplay()}{onPostDisplay()}}
+{\footnotesize\ttfamily void Component\+::on\+Post\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_component_a7ffbee9cd61035ffb5b5795718b4d056}\label{class_component_a7ffbee9cd61035ffb5b5795718b4d056}} 
+\index{Component@{Component}!onTick@{onTick}}
+\index{onTick@{onTick}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
+{\footnotesize\ttfamily void Component\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_component_a614439ccac0344926adc4c0165d64060}\label{class_component_a614439ccac0344926adc4c0165d64060}} 
+\index{Component@{Component}!Entity@{Entity}}
+\index{Entity@{Entity}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Entity}{Entity}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_entity}{Entity}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+allows the \mbox{\hyperlink{class_entity}{Entity}} class to access the private variables and fuctions 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Big\+\_\+\+Boy/\mbox{\hyperlink{_component_8h}{Component.\+h}}\item 
+src/\+Big\+\_\+\+Boy/\mbox{\hyperlink{_component_8cpp}{Component.\+cpp}}\end{DoxyCompactItemize}

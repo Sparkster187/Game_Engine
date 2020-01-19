@@ -1,0 +1,56 @@
+\hypertarget{main_8cpp}{}\doxysection{src/\+Game/main.cpp File Reference}
+\label{main_8cpp}\index{src/Game/main.cpp@{src/Game/main.cpp}}
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include \char`\"{}Big\+\_\+\+Boy\textbackslash{}\+Geppy.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+$<$ core contains the
+
+$<$ game\+Object becomes an entity
+
+$<$ triangle uses game\+Object to access Mesh Renderer component
+
+$<$ transform uses game\+Object to access the \mbox{\hyperlink{class_transform}{Transform}} component
+
+$<$ main\+Camera becomes an entity
+
+$<$ camera uses main\+Camera to get the \mbox{\hyperlink{class_camera}{Camera}} component
+
+$<$ camera\+Transform uses main\+Camera to access the transform component
+
+$<$ main\+Camera uses transform component to set the current position of the camera
+
+Loads in texture and object files
+
+$<$ calls load\+Object function to load the object file
+
+$<$ calls load\+Texture function to load the texture file
+
+$<$ tells the program to runHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

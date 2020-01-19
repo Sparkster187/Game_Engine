@@ -1,0 +1,5 @@
+<map id="MeshRenderer::loadTexture" name="MeshRenderer::loadTexture">
+<area shape="rect" id="node1" title="function for loading the texture from the file in the path given" alt="" coords="5,31,187,57"/>
+<area shape="rect" id="node2" href="$stb__image_8h.html#ad3e11bb44412a7ba348acfbad09caacb" title=" " alt="" coords="235,5,348,32"/>
+<area shape="rect" id="node3" href="$stb__image_8h.html#aefdc7387857a14894bbf321e9ea4f048" title=" " alt="" coords="254,56,329,83"/>
+</map>

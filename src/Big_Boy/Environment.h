@@ -3,7 +3,7 @@
 class Environment
 {
 public:
-	float getDeltaTime();
+	float getDeltaTime(); 
 private:
 	float deltaTime;
 };

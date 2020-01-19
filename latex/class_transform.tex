@@ -1,0 +1,163 @@
+\hypertarget{class_transform}{}\doxysection{Transform Class Reference}
+\label{class_transform}\index{Transform@{Transform}}
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+
+
+Inheritance diagram for Transform\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_transform__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Transform\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_transform__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_transform_a1e288549c84f210bc24544b2aaf94945}{translate}} (glm\+::vec3 amount)
+\begin{DoxyCompactList}\small\item\em function for moving an object along the axis \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_aae1f22b1ca4f80a936e25cf34ae634f4}{Rotate}} (glm\+::vec3 amount)
+\begin{DoxyCompactList}\small\item\em rotating an object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_aaab0b901219b59e186df1b67db3793a0}{Scale}} (glm\+::vec3 amount)
+\begin{DoxyCompactList}\small\item\em changing the scale of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a2c6bef156fc34b8d73b5068bfbdd23e0}{Set\+Local\+Position}} (glm\+::vec3 position)
+\begin{DoxyCompactList}\small\item\em returns the current position of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a88f0c62b47c2997ec6800ff5813e8975}{Set\+Local\+Rotation}} (glm\+::vec3 rotation)
+\begin{DoxyCompactList}\small\item\em returns the current rotation of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_a97edb70f64874085761e1c8acdffce4f}{Set\+Local\+Scale}} (glm\+::vec3 scale)
+\begin{DoxyCompactList}\small\item\em returns the current scale of the object \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_transform_af0671190bf3f3b4e5cdd8ccb23c05a7a}{get\+Model\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em returns a matrix with the position, rotation and scale of the object \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_transform_a961ceb77f83e9a950081a6530e1c46bf}{get\+View\+Matrix}} ()
+\item 
+glm\+::mat4 \mbox{\hyperlink{class_transform_ad9ca33edfb98b609b3a965dd1dc321a7}{get\+Projection\+Matrix}} ()
+\item 
+void \mbox{\hyperlink{class_transform_a8bfd2334169ec0ff45dc8c7131b48388}{on\+Init}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_transform_af0671190bf3f3b4e5cdd8ccb23c05a7a}\label{class_transform_af0671190bf3f3b4e5cdd8ccb23c05a7a}} 
+\index{Transform@{Transform}!getModelMatrix@{getModelMatrix}}
+\index{getModelMatrix@{getModelMatrix}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getModelMatrix()}{getModelMatrix()}}
+{\footnotesize\ttfamily glm\+::mat4 Transform\+::get\+Model\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns a matrix with the position, rotation and scale of the object 
+
+$<$ takes the current location
+
+$<$ rotation on the x axis
+
+$<$ rotation on the y axis
+
+$<$ rotation on the z axis
+
+$<$ takes the current scale\mbox{\Hypertarget{class_transform_ad9ca33edfb98b609b3a965dd1dc321a7}\label{class_transform_ad9ca33edfb98b609b3a965dd1dc321a7}} 
+\index{Transform@{Transform}!getProjectionMatrix@{getProjectionMatrix}}
+\index{getProjectionMatrix@{getProjectionMatrix}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getProjectionMatrix()}{getProjectionMatrix()}}
+{\footnotesize\ttfamily glm\+::mat4 Transform\+::get\+Projection\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_transform_a961ceb77f83e9a950081a6530e1c46bf}\label{class_transform_a961ceb77f83e9a950081a6530e1c46bf}} 
+\index{Transform@{Transform}!getViewMatrix@{getViewMatrix}}
+\index{getViewMatrix@{getViewMatrix}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getViewMatrix()}{getViewMatrix()}}
+{\footnotesize\ttfamily glm\+::mat4 Transform\+::get\+View\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+$<$ returns the inverse value of model matrix since the world moves around the camera instead of the camera actually movingHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_transform_a961ceb77f83e9a950081a6530e1c46bf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_transform_a8bfd2334169ec0ff45dc8c7131b48388}\label{class_transform_a8bfd2334169ec0ff45dc8c7131b48388}} 
+\index{Transform@{Transform}!onInit@{onInit}}
+\index{onInit@{onInit}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{onInit()}{onInit()}}
+{\footnotesize\ttfamily void Transform\+::on\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_component_aab73b3c7db7ef0596d6e050ff54612e3}{Component}}.
+
+\mbox{\Hypertarget{class_transform_aae1f22b1ca4f80a936e25cf34ae634f4}\label{class_transform_aae1f22b1ca4f80a936e25cf34ae634f4}} 
+\index{Transform@{Transform}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Transform\+::\+Rotate (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{amount }\end{DoxyParamCaption})}
+
+
+
+rotating an object 
+
+\mbox{\Hypertarget{class_transform_aaab0b901219b59e186df1b67db3793a0}\label{class_transform_aaab0b901219b59e186df1b67db3793a0}} 
+\index{Transform@{Transform}!Scale@{Scale}}
+\index{Scale@{Scale}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{Scale()}{Scale()}}
+{\footnotesize\ttfamily void Transform\+::\+Scale (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{amount }\end{DoxyParamCaption})}
+
+
+
+changing the scale of the object 
+
+\mbox{\Hypertarget{class_transform_a2c6bef156fc34b8d73b5068bfbdd23e0}\label{class_transform_a2c6bef156fc34b8d73b5068bfbdd23e0}} 
+\index{Transform@{Transform}!SetLocalPosition@{SetLocalPosition}}
+\index{SetLocalPosition@{SetLocalPosition}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{SetLocalPosition()}{SetLocalPosition()}}
+{\footnotesize\ttfamily void Transform\+::\+Set\+Local\+Position (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{position }\end{DoxyParamCaption})}
+
+
+
+returns the current position of the object 
+
+\mbox{\Hypertarget{class_transform_a88f0c62b47c2997ec6800ff5813e8975}\label{class_transform_a88f0c62b47c2997ec6800ff5813e8975}} 
+\index{Transform@{Transform}!SetLocalRotation@{SetLocalRotation}}
+\index{SetLocalRotation@{SetLocalRotation}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{SetLocalRotation()}{SetLocalRotation()}}
+{\footnotesize\ttfamily void Transform\+::\+Set\+Local\+Rotation (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{rotation }\end{DoxyParamCaption})}
+
+
+
+returns the current rotation of the object 
+
+\mbox{\Hypertarget{class_transform_a97edb70f64874085761e1c8acdffce4f}\label{class_transform_a97edb70f64874085761e1c8acdffce4f}} 
+\index{Transform@{Transform}!SetLocalScale@{SetLocalScale}}
+\index{SetLocalScale@{SetLocalScale}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{SetLocalScale()}{SetLocalScale()}}
+{\footnotesize\ttfamily void Transform\+::\+Set\+Local\+Scale (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{scale }\end{DoxyParamCaption})}
+
+
+
+returns the current scale of the object 
+
+\mbox{\Hypertarget{class_transform_a1e288549c84f210bc24544b2aaf94945}\label{class_transform_a1e288549c84f210bc24544b2aaf94945}} 
+\index{Transform@{Transform}!translate@{translate}}
+\index{translate@{translate}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Transform\+::translate (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{amount }\end{DoxyParamCaption})}
+
+
+
+function for moving an object along the axis 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Big\+\_\+\+Boy/\mbox{\hyperlink{_transform_8h}{Transform.\+h}}\item 
+src/\+Big\+\_\+\+Boy/\mbox{\hyperlink{_transform_8cpp}{Transform.\+cpp}}\end{DoxyCompactItemize}

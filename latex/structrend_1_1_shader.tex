@@ -1,0 +1,207 @@
+\hypertarget{structrend_1_1_shader}{}\doxysection{rend\+::Shader Struct Reference}
+\label{structrend_1_1_shader}\index{rend::Shader@{rend::Shader}}
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+
+
+Inheritance diagram for rend\+::Shader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{structrend_1_1_shader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rend\+::Shader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{structrend_1_1_shader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrend_1_1_shader_a19e4082c42e8d2fd7256b5bfe3d2d811}{$\sim$\+Shader}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_a8309245e18429783084368563d8773d4}{render}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_a008b94b5978357a2b427ee08b525f0ea}{render}} (const std\+::sr1\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_render_texture}{Render\+Texture}} $>$ \&target)
+\item 
+G\+Luint \mbox{\hyperlink{structrend_1_1_shader_a2b07a4d9f0621afb29461c61b1c52b21}{get\+Id}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_a304f1c23a3b23820cd963ab2650e8fde}{set\+Source}} (const std\+::string \&source)
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_afa3806a30735073fadeecab834f72896}{parse}} (const std\+::string \&source)
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_a51e94c4054be2aad6672222f859b5a34}{set\+Uniform}} (const std\+::string \&variable, float value)
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_a4e58f055ab23afba6fb41c8b5129cc69}{set\+Uniform}} (const std\+::string \&variable, mat4 value)
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_a96110bafaf49b45af533b790cc756eee}{set\+Uniform}} (const std\+::string \&variable, vec2 value)
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_a372d2a7398255657eaa0de0d77a69822}{set\+Uniform}} (const std\+::string \&variable, vec3 value)
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_ad459f5703d6603fedce20c706f558779}{set\+Uniform}} (const std\+::string \&variable, vec4 value)
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_aded4d1729ad96bf06f76ea93bd76899b}{set\+Attribute}} (const std\+::string \&variable, const std\+::sr1\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} $>$ \&value)
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_a0456c18845deee7b6465e3fb1cf7b099}{set\+Sampler}} (const std\+::string \&variable, const std\+::sr1\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_texture_adapter}{Texture\+Adapter}} $>$ \&value)
+\item 
+void \mbox{\hyperlink{structrend_1_1_shader_a69dc5e4e04fa799f04feec3545c3f9bd}{set\+Mesh}} (const std\+::sr1\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} $>$ \&value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrend_1_1_shader_a3dc36def8e0177044acd58a205312a2f}{Context}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrend_1_1_shader_a19e4082c42e8d2fd7256b5bfe3d2d811}\label{structrend_1_1_shader_a19e4082c42e8d2fd7256b5bfe3d2d811}} 
+\index{rend::Shader@{rend::Shader}!````~Shader@{$\sim$Shader}}
+\index{````~Shader@{$\sim$Shader}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{$\sim$Shader()}{~Shader()}}
+{\footnotesize\ttfamily rend\+::\+Shader\+::$\sim$\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{structrend_1_1_shader_a19e4082c42e8d2fd7256b5bfe3d2d811_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrend_1_1_shader_a2b07a4d9f0621afb29461c61b1c52b21}\label{structrend_1_1_shader_a2b07a4d9f0621afb29461c61b1c52b21}} 
+\index{rend::Shader@{rend::Shader}!getId@{getId}}
+\index{getId@{getId}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily G\+Luint rend\+::\+Shader\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_afa3806a30735073fadeecab834f72896}\label{structrend_1_1_shader_afa3806a30735073fadeecab834f72896}} 
+\index{rend::Shader@{rend::Shader}!parse@{parse}}
+\index{parse@{parse}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{structrend_1_1_shader_afa3806a30735073fadeecab834f72896_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrend_1_1_shader_a8309245e18429783084368563d8773d4}\label{structrend_1_1_shader_a8309245e18429783084368563d8773d4}} 
+\index{rend::Shader@{rend::Shader}!render@{render}}
+\index{render@{render}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{structrend_1_1_shader_a8309245e18429783084368563d8773d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrend_1_1_shader_a008b94b5978357a2b427ee08b525f0ea}\label{structrend_1_1_shader_a008b94b5978357a2b427ee08b525f0ea}} 
+\index{rend::Shader@{rend::Shader}!render@{render}}
+\index{render@{render}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::render (\begin{DoxyParamCaption}\item[{const std\+::sr1\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_render_texture}{Render\+Texture}} $>$ \&}]{target }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrend_1_1_shader_a008b94b5978357a2b427ee08b525f0ea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrend_1_1_shader_aded4d1729ad96bf06f76ea93bd76899b}\label{structrend_1_1_shader_aded4d1729ad96bf06f76ea93bd76899b}} 
+\index{rend::Shader@{rend::Shader}!setAttribute@{setAttribute}}
+\index{setAttribute@{setAttribute}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{setAttribute()}{setAttribute()}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::set\+Attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{variable,  }\item[{const std\+::sr1\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} $>$ \&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a69dc5e4e04fa799f04feec3545c3f9bd}\label{structrend_1_1_shader_a69dc5e4e04fa799f04feec3545c3f9bd}} 
+\index{rend::Shader@{rend::Shader}!setMesh@{setMesh}}
+\index{setMesh@{setMesh}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{setMesh()}{setMesh()}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::set\+Mesh (\begin{DoxyParamCaption}\item[{const std\+::sr1\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} $>$ \&}]{value }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrend_1_1_shader_a69dc5e4e04fa799f04feec3545c3f9bd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrend_1_1_shader_a0456c18845deee7b6465e3fb1cf7b099}\label{structrend_1_1_shader_a0456c18845deee7b6465e3fb1cf7b099}} 
+\index{rend::Shader@{rend::Shader}!setSampler@{setSampler}}
+\index{setSampler@{setSampler}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{setSampler()}{setSampler()}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::set\+Sampler (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{variable,  }\item[{const std\+::sr1\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_texture_adapter}{Texture\+Adapter}} $>$ \&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a304f1c23a3b23820cd963ab2650e8fde}\label{structrend_1_1_shader_a304f1c23a3b23820cd963ab2650e8fde}} 
+\index{rend::Shader@{rend::Shader}!setSource@{setSource}}
+\index{setSource@{setSource}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{setSource()}{setSource()}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::set\+Source (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrend_1_1_shader_a304f1c23a3b23820cd963ab2650e8fde_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrend_1_1_shader_a51e94c4054be2aad6672222f859b5a34}\label{structrend_1_1_shader_a51e94c4054be2aad6672222f859b5a34}} 
+\index{rend::Shader@{rend::Shader}!setUniform@{setUniform}}
+\index{setUniform@{setUniform}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{setUniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::set\+Uniform (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{variable,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a4e58f055ab23afba6fb41c8b5129cc69}\label{structrend_1_1_shader_a4e58f055ab23afba6fb41c8b5129cc69}} 
+\index{rend::Shader@{rend::Shader}!setUniform@{setUniform}}
+\index{setUniform@{setUniform}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{setUniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::set\+Uniform (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{variable,  }\item[{mat4}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a96110bafaf49b45af533b790cc756eee}\label{structrend_1_1_shader_a96110bafaf49b45af533b790cc756eee}} 
+\index{rend::Shader@{rend::Shader}!setUniform@{setUniform}}
+\index{setUniform@{setUniform}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{setUniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::set\+Uniform (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{variable,  }\item[{vec2}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a372d2a7398255657eaa0de0d77a69822}\label{structrend_1_1_shader_a372d2a7398255657eaa0de0d77a69822}} 
+\index{rend::Shader@{rend::Shader}!setUniform@{setUniform}}
+\index{setUniform@{setUniform}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{setUniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::set\+Uniform (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{variable,  }\item[{vec3}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_ad459f5703d6603fedce20c706f558779}\label{structrend_1_1_shader_ad459f5703d6603fedce20c706f558779}} 
+\index{rend::Shader@{rend::Shader}!setUniform@{setUniform}}
+\index{setUniform@{setUniform}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{setUniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void rend\+::\+Shader\+::set\+Uniform (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{variable,  }\item[{vec4}]{value }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structrend_1_1_shader_a3dc36def8e0177044acd58a205312a2f}\label{structrend_1_1_shader_a3dc36def8e0177044acd58a205312a2f}} 
+\index{rend::Shader@{rend::Shader}!Context@{Context}}
+\index{Context@{Context}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{Context}{Context}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structrend_1_1_context}{Context}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/\mbox{\hyperlink{_shader_8h}{Shader.\+h}}\item 
+src/rend/\mbox{\hyperlink{_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

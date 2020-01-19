@@ -1,0 +1,157 @@
+\hypertarget{class_mesh_renderer}{}\doxysection{Mesh\+Renderer Class Reference}
+\label{class_mesh_renderer}\index{MeshRenderer@{MeshRenderer}}
+
+
+$<$ Inherits from \mbox{\hyperlink{class_component}{Component}} class  
+
+
+
+
+{\ttfamily \#include $<$Mesh\+Renderer.\+h$>$}
+
+
+
+Inheritance diagram for Mesh\+Renderer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_mesh_renderer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mesh\+Renderer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_mesh_renderer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mesh_renderer_a08874f189d612ddd34a155e146cd149e}{load\+Object}} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em function for loading the object mesh from the file in the path given \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_renderer_ae40f550aae0b172d53f9277a0a078dba}{load\+Texture}} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em function for loading the texture from the file in the path given \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_renderer_ae1b2bcbad4a4fba6a62d8175376e5a13}{on\+Init}} ()
+\item 
+void \mbox{\hyperlink{class_mesh_renderer_add8427fa9ba24b40b08dcc734ab1b754}{on\+Display}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_mesh_renderer_a4107254ac74f90d4f91e810d755b98c2}{Core}}
+\item 
+class \mbox{\hyperlink{class_mesh_renderer_a614439ccac0344926adc4c0165d64060}{Entity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+$<$ Inherits from \mbox{\hyperlink{class_component}{Component}} class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mesh_renderer_a08874f189d612ddd34a155e146cd149e}\label{class_mesh_renderer_a08874f189d612ddd34a155e146cd149e}} 
+\index{MeshRenderer@{MeshRenderer}!loadObject@{loadObject}}
+\index{loadObject@{loadObject}!MeshRenderer@{MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{loadObject()}{loadObject()}}
+{\footnotesize\ttfamily void Mesh\+Renderer\+::load\+Object (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+function for loading the object mesh from the file in the path given 
+
+$<$ context is created
+
+$<$ shader uses context to get the create\+Shader function
+
+$<$ points to the vertex and fragment shader so that they get the information they need
+
+$<$shape uses context to get the data from create\+Mesh function
+
+$<$ create an input stream variable
+
+$<$ variable then checks the path
+
+$<$ variable to store obj file data
+
+$<$ variable to store a line of the data within the obj file
+
+$<$ checks if the file is open
+
+$<$ if the file is not open then the program is aborted
+
+$<$ adds the string from line to obj and then tells it to move on to the next line
+
+$<$ points to the object file data\mbox{\Hypertarget{class_mesh_renderer_ae40f550aae0b172d53f9277a0a078dba}\label{class_mesh_renderer_ae40f550aae0b172d53f9277a0a078dba}} 
+\index{MeshRenderer@{MeshRenderer}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!MeshRenderer@{MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{loadTexture()}{loadTexture()}}
+{\footnotesize\ttfamily void Mesh\+Renderer\+::load\+Texture (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+function for loading the texture from the file in the path given 
+
+$<$ checks if there is any data that can be read
+
+$<$ if there is no data then an exception is thrown
+
+$<$ sets the size of the texture to be the same as the obtained width and height
+
+$<$ sets the position of the obtained pixel to be at the current value of x and y and stores the colour value in a vec3
+
+$<$ points to the set texture function and takes the values of u\+\_\+texture and texture to get a complete texture for the modelHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_mesh_renderer_ae40f550aae0b172d53f9277a0a078dba_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_mesh_renderer_add8427fa9ba24b40b08dcc734ab1b754}\label{class_mesh_renderer_add8427fa9ba24b40b08dcc734ab1b754}} 
+\index{MeshRenderer@{MeshRenderer}!onDisplay@{onDisplay}}
+\index{onDisplay@{onDisplay}!MeshRenderer@{MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{onDisplay()}{onDisplay()}}
+{\footnotesize\ttfamily void Mesh\+Renderer\+::on\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+$<$ projection matrix
+
+$<$ obtains the model matrix of the object
+
+$<$ obtains the view matrix of the scene
+
+$<$ setmesh gets the object and texture data and shader accesses it
+
+Reimplemented from \mbox{\hyperlink{class_component_a752d4d19d7b3b7655bd0eb1b515cba29}{Component}}.
+
+\mbox{\Hypertarget{class_mesh_renderer_ae1b2bcbad4a4fba6a62d8175376e5a13}\label{class_mesh_renderer_ae1b2bcbad4a4fba6a62d8175376e5a13}} 
+\index{MeshRenderer@{MeshRenderer}!onInit@{onInit}}
+\index{onInit@{onInit}!MeshRenderer@{MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{onInit()}{onInit()}}
+{\footnotesize\ttfamily void Mesh\+Renderer\+::on\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_component_aab73b3c7db7ef0596d6e050ff54612e3}{Component}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_mesh_renderer_a4107254ac74f90d4f91e810d755b98c2}\label{class_mesh_renderer_a4107254ac74f90d4f91e810d755b98c2}} 
+\index{MeshRenderer@{MeshRenderer}!Core@{Core}}
+\index{Core@{Core}!MeshRenderer@{MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{Core}{Core}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_core}{Core}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_mesh_renderer_a614439ccac0344926adc4c0165d64060}\label{class_mesh_renderer_a614439ccac0344926adc4c0165d64060}} 
+\index{MeshRenderer@{MeshRenderer}!Entity@{Entity}}
+\index{Entity@{Entity}!MeshRenderer@{MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{Entity}{Entity}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_entity}{Entity}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Big\+\_\+\+Boy/\mbox{\hyperlink{_mesh_renderer_8h}{Mesh\+Renderer.\+h}}\item 
+src/\+Big\+\_\+\+Boy/\mbox{\hyperlink{_mesh_renderer_8cpp}{Mesh\+Renderer.\+cpp}}\end{DoxyCompactItemize}

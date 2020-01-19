@@ -1,0 +1,85 @@
+\hypertarget{_mesh_renderer_8cpp}{}\doxysection{src/\+Big\+\_\+\+Boy/\+Mesh\+Renderer.cpp File Reference}
+\label{_mesh_renderer_8cpp}\index{src/Big\_Boy/MeshRenderer.cpp@{src/Big\_Boy/MeshRenderer.cpp}}
+{\ttfamily \#include \char`\"{}rend/stb\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$S\+D\+L2/\+S\+D\+L.\+h$>$}\newline
+{\ttfamily \#include $<$G\+L/glew.\+h$>$}\newline
+{\ttfamily \#include $<$glm/glm.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$rend\textbackslash{}rend.\+h$>$}\newline
+{\ttfamily \#include $<$sr1\textbackslash{}memory$>$}\newline
+{\ttfamily \#include \char`\"{}Geppy.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+Include dependency graph for Mesh\+Renderer.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mesh_renderer_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_mesh_renderer_8cpp_a18372412ad2fc3ce1e3240b3cf0efe78}{S\+T\+B\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const G\+Lfloat \mbox{\hyperlink{_mesh_renderer_8cpp_a8c07159e03d9e81ca358c8278412005f}{positions}} \mbox{[}$\,$\mbox{]}
+\item 
+const G\+Lfloat \mbox{\hyperlink{_mesh_renderer_8cpp_ae3fec013384577265bbcc071924945af}{colors}} \mbox{[}$\,$\mbox{]}
+\item 
+const G\+Lchar $\ast$ \mbox{\hyperlink{_mesh_renderer_8cpp_a03f18b6aa7eff687c2162c03280d71d8}{src}}
+\begin{DoxyCompactList}\small\item\em combines the vertex and fragment shaders into one variable \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_mesh_renderer_8cpp_a18372412ad2fc3ce1e3240b3cf0efe78}\label{_mesh_renderer_8cpp_a18372412ad2fc3ce1e3240b3cf0efe78}} 
+\index{MeshRenderer.cpp@{MeshRenderer.cpp}!STB\_IMAGE\_IMPLEMENTATION@{STB\_IMAGE\_IMPLEMENTATION}}
+\index{STB\_IMAGE\_IMPLEMENTATION@{STB\_IMAGE\_IMPLEMENTATION}!MeshRenderer.cpp@{MeshRenderer.cpp}}
+\doxysubsubsection{\texorpdfstring{STB\_IMAGE\_IMPLEMENTATION}{STB\_IMAGE\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_mesh_renderer_8cpp_ae3fec013384577265bbcc071924945af}\label{_mesh_renderer_8cpp_ae3fec013384577265bbcc071924945af}} 
+\index{MeshRenderer.cpp@{MeshRenderer.cpp}!colors@{colors}}
+\index{colors@{colors}!MeshRenderer.cpp@{MeshRenderer.cpp}}
+\doxysubsubsection{\texorpdfstring{colors}{colors}}
+{\footnotesize\ttfamily const G\+Lfloat colors\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  1.0f, 0.0f, 0.0f, 1.0f,}
+\DoxyCodeLine{  0.0f, 1.0f, 0.0f, 1.0f,}
+\DoxyCodeLine{  0.0f, 0.0f, 1.0f, 1.0f}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_mesh_renderer_8cpp_a8c07159e03d9e81ca358c8278412005f}\label{_mesh_renderer_8cpp_a8c07159e03d9e81ca358c8278412005f}} 
+\index{MeshRenderer.cpp@{MeshRenderer.cpp}!positions@{positions}}
+\index{positions@{positions}!MeshRenderer.cpp@{MeshRenderer.cpp}}
+\doxysubsubsection{\texorpdfstring{positions}{positions}}
+{\footnotesize\ttfamily const G\+Lfloat positions\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  0.0f, 0.5f, 0.0f,}
+\DoxyCodeLine{  -\/0.5f, -\/0.5f, 0.0f,}
+\DoxyCodeLine{  0.5f, -\/0.5f, 0.0f}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_mesh_renderer_8cpp_a03f18b6aa7eff687c2162c03280d71d8}\label{_mesh_renderer_8cpp_a03f18b6aa7eff687c2162c03280d71d8}} 
+\index{MeshRenderer.cpp@{MeshRenderer.cpp}!src@{src}}
+\index{src@{src}!MeshRenderer.cpp@{MeshRenderer.cpp}}
+\doxysubsubsection{\texorpdfstring{src}{src}}
+{\footnotesize\ttfamily const G\+Lchar$\ast$ src}
+
+
+
+combines the vertex and fragment shaders into one variable 
+

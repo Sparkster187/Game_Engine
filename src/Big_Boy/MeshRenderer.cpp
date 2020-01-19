@@ -28,7 +28,7 @@ const GLfloat colors[] = {
   0.0f, 0.0f, 1.0f, 1.0f
 };
 
-const GLchar *src =
+const GLchar *src = ///< combines the vertex and fragment shaders into one variable
 "#ifdef VERTEX \n" \
 "\n" \
 "attribute vec3 a_Position; \n" \
@@ -37,13 +37,14 @@ const GLchar *src =
 "\n" \
 "uniform mat4 u_Projection; \n" \
 "uniform mat4 u_Model; \n" \
+"uniform mat4 u_View; \n" \
 "\n" \
 "varying vec3 v_Normal; \n" \
 "varying vec2 v_TexCoord; \n" \
 "\n" \
 "void main() \n" \
 "{ \n" \
-"  gl_Position = u_Projection * u_Model * vec4(a_Position, 1);" \
+"  gl_Position = u_Projection * u_View * u_Model * vec4(a_Position, 1);" \
 " \n" \
 "\n" \
 "  v_Normal = a_Normal; \n" \
@@ -182,29 +183,29 @@ void MeshRenderer::onInit()
 
 void MeshRenderer::loadObject(const char* path)
 {
-	std::shared_ptr<Context> context = getCore()->getContext();// context is created
-	shader = context->createShader();// shader uses context to get the createShader function
-	shader->parse(src);//points to the vertex and fragment shader so that they get the information they need
+	std::shared_ptr<Context> context = getCore()->getContext();///< context is created
+	shader = context->createShader();///< shader uses context to get the createShader function
+	shader->parse(src);///< points to the vertex and fragment shader so that they get the information they need
 
-	shape = context->createMesh();//shape uses context to get the data from createMesh function
+	shape = context->createMesh();///<shape uses context to get the data from createMesh function
 	{
-		std::ifstream f;// create an input stream variable
-		f.open(path);//variable then checks the path
-		std::string obj;
-		std::string line;
+		std::ifstream f;///< create an input stream variable
+		f.open(path);///< variable then checks the path
+		std::string obj;///< variable to store obj file data
+		std::string line;///< variable to store a line of the data within the obj file
 
-		if (!f.is_open())
+		if (!f.is_open())///< checks if the file is open
 		{
-			abort();
+			abort();///< if the file is not open then the program is aborted
 		}
 
 		while (!f.eof())
 		{
 			std::getline(f, line);
-			obj += line + "\n";
+			obj += line + "\n";///< adds the string from line to obj and then tells it to move on to the next line 
 		}
 
-		shape->parse(obj);// points to the object file data
+		shape->parse(obj);///< points to the object file data
 	}
 }
 
@@ -220,12 +221,12 @@ void MeshRenderer::loadTexture(const char* path)
 		unsigned char *data = stbi_load(path,
 			&w, &h, &bpp, 3);
 
-		if (!data)
+		if (!data)///< checks if there is any data that can be read
 		{
-			throw rend::Exception("Failed to open image");
+			throw rend::Exception("Failed to open image"); ///< if there is no data then an exception is thrown
 		}
 
-		texture->setSize(w, h);
+		texture->setSize(w, h); ///< sets the size of the texture to be the same as the obtained width and height
 
 		for (int y = 0; y < h; y++)
 		{
@@ -233,40 +234,42 @@ void MeshRenderer::loadTexture(const char* path)
 			{
 				int r = y * w * 3 + x * 3;
 
-				texture->setPixel(x, y, vec3(
+				texture->setPixel(x, y, vec3( ///< sets the position of the obtained pixel to be at the current value of x and y and stores the colour value in a vec3
 					data[r] / 255.0f,
 					data[r + 1] / 255.0f,
 					data[r + 2] / 255.0f));
 			}
 		}
-		stbi_image_free(data);
+		stbi_image_free(data); 
 	}
 
 	
-	shape->setTexture("u_Texture", texture);
+	shape->setTexture("u_Texture", texture);///< points to the set texture function and takes the values of u_texture and texture to get a complete texture for the model
 }
 
 void MeshRenderer::onDisplay()
 {
 
-		shader->setUniform("u_Projection", perspective(radians(45.0f), 1.0f, 0.1f, 100.0f));//projection matrix
+		shader->setUniform("u_Projection", perspective(radians(45.0f), 1.0f, 0.1f, 100.0f)); ///< projection matrix
 
-		shader->setUniform("u_Model", getTransform()->getModelMatrix());
+		shader->setUniform("u_Model", getTransform()->getModelMatrix()); ///< obtains the model matrix of the object
+		shader->setUniform("u_View", getCore()->getCamera()->getTransform()->getViewMatrix()); ///< obtains the view matrix of the scene
 		//shader->setUniform("u_Model",translate(glm::mat4(1.0f), vec3(0, 0, -10))*rotate(glm::mat4(1.0f), float (radians(angle)), vec3(0, 1, 0)));
 
-		shader->setMesh(shape); //
-		shader->render();
+		shader->setMesh(shape); ///< setmesh gets the object and texture data and shader accesses it
+		
 
-		glUseProgram(programId);
-		glBindVertexArray(vaoId);
+	//	glUseProgram(programId);
+	//	glBindVertexArray(vaoId);
 
-		loadObject("../samples/curuthers/curuthers.obj");
-		loadTexture("../samples/curuthers/Whiskers_diffuse.png");
+	//	loadObject("../samples/curuthers/curuthers.obj");
+	//	loadTexture("../samples/curuthers/Whiskers_diffuse.png");
 
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+	//	glDrawArrays(GL_TRIANGLES, 0, 3);
 
-		glBindVertexArray(0);
-		glUseProgram(0);		
+	//	glBindVertexArray(0);
+	//	glUseProgram(0);		
 
+		shader->render(); 
 	
 }

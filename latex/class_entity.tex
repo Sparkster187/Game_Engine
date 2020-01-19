@@ -1,0 +1,85 @@
+\hypertarget{class_entity}{}\doxysection{Entity Class Reference}
+\label{class_entity}\index{Entity@{Entity}}
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_core}{Core}} $>$ \mbox{\hyperlink{class_entity_aa6a3353873548aba14784fa35943f263}{get\+Core}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_entity_a3285414a556f8b07751d76dafaf03505}{get\+Component}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_entity_a5bdfdd67211c25386f5cf48defa312be}{add\+Component}} ()
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_entity_a3947ababbaa6082f36c7cf15bf2fbad3}{add\+Component}} (A a)
+\item 
+{\footnotesize template$<$typename T , typename A , typename B $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_entity_ab1b4cf9aba3876b8507925096e64d9ee}{add\+Component}} (A a, B b)
+\item 
+{\footnotesize template$<$typename T , typename A , typename B , typename C $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_entity_ade8713ecede3070487f360a50b26de05}{add\+Component}} (A a, B b, C c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_entity_a4107254ac74f90d4f91e810d755b98c2}{Core}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_entity_a5bdfdd67211c25386f5cf48defa312be}\label{class_entity_a5bdfdd67211c25386f5cf48defa312be}} 
+\index{Entity@{Entity}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Entity\+::add\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Template functions allows for multiple components to be dealt with $<$ pushes back the component in the list\mbox{\Hypertarget{class_entity_a3947ababbaa6082f36c7cf15bf2fbad3}\label{class_entity_a3947ababbaa6082f36c7cf15bf2fbad3}} 
+\index{Entity@{Entity}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename A $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Entity\+::add\+Component (\begin{DoxyParamCaption}\item[{A}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_entity_ab1b4cf9aba3876b8507925096e64d9ee}\label{class_entity_ab1b4cf9aba3876b8507925096e64d9ee}} 
+\index{Entity@{Entity}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename A , typename B $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Entity\+::add\+Component (\begin{DoxyParamCaption}\item[{A}]{a,  }\item[{B}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_entity_ade8713ecede3070487f360a50b26de05}\label{class_entity_ade8713ecede3070487f360a50b26de05}} 
+\index{Entity@{Entity}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename A , typename B , typename C $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Entity\+::add\+Component (\begin{DoxyParamCaption}\item[{A}]{a,  }\item[{B}]{b,  }\item[{C}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_entity_a3285414a556f8b07751d76dafaf03505}\label{class_entity_a3285414a556f8b07751d76dafaf03505}} 
+\index{Entity@{Entity}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Entity\+::get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_entity_aa6a3353873548aba14784fa35943f263}\label{class_entity_aa6a3353873548aba14784fa35943f263}} 
+\index{Entity@{Entity}!getCore@{getCore}}
+\index{getCore@{getCore}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getCore()}{getCore()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_core}{Core}} $>$ Entity\+::get\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+$<$ returns the value of core.\+lock so that the reference count is increased by 1 and doesn\textquotesingle{}t return as 0, also returns a shared pointer
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_entity_a4107254ac74f90d4f91e810d755b98c2}\label{class_entity_a4107254ac74f90d4f91e810d755b98c2}} 
+\index{Entity@{Entity}!Core@{Core}}
+\index{Core@{Core}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Core}{Core}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_core}{Core}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Big\+\_\+\+Boy/\mbox{\hyperlink{_entity_8h}{Entity.\+h}}\item 
+src/\+Big\+\_\+\+Boy/\mbox{\hyperlink{_entity_8cpp}{Entity.\+cpp}}\end{DoxyCompactItemize}
